@@ -206,7 +206,7 @@ INSERT INTO student (name,course,address,pincode,age,coursefees,day,dateofbirth)
 
 
 
-##### UPDATE student SET name="rahul\\\_change" ,address="mumbai\\\_change" WHERE id=3.
+##### UPDATE student SET name="rahul\_change" ,address="mumbai\_change" WHERE id=3.
 
 
 
