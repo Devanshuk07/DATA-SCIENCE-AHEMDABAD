@@ -1,4 +1,4 @@
-## HOW TO CREATE A TABLE IN WHICH STUDENT COURSE IS LINED WITH COURSE.WHILE CHANGING THE STUDENT COURSE IT REFLECTS IN VIEW.
+## HOW TO CREATE A TABLE IN WHICH STUDENT COURSE IS LINKED WITH COURSE.WHILE CHANGING THE STUDENT COURSE IT REFLECTS IN VIEW.
 
 
 
@@ -54,9 +54,9 @@
 
 ###### SELECT student.sname, course.cname
 
-###### FROM student
+###### FROM enrollment
 
-###### JOIN enrollment
+###### JOIN student
 
 ###### ON student.sid = enrollment.sid  //because enrollment has sid also.
 

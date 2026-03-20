@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2026 at 03:08 PM
+-- Generation Time: Mar 16, 2026 at 09:03 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -21,6 +21,51 @@ SET time_zone = "+00:00";
 -- Database: `db2`
 --
 
+DELIMITER $$
+--
+-- Procedures
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `course_insert` (IN `cid` INT, IN `cname` VARCHAR(30), IN `cduration` INT)   BEGIN
+    INSERT INTO course(course_id,course_name,course_duration) VALUES(cid,cname,cduration);
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `course_update` (`cid` INT, `cname` VARCHAR(30), `cduration` INT)   BEGIN
+    UPDATE course
+    SET course_name=cname,
+    course_duration=cduration
+    WHERE course_id=cid;
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `emp_del` (`eid` INT)   BEGIN
+    DELETE FROM employee WHERE emp_id=eid;
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `emp_insert` (`eid` INT, `ename` VARCHAR(30), `esalary` INT, `eis_active` BOOLEAN, `edepart` VARCHAR(30))   BEGIN
+    INSERT INTO employee(emp_id,emp_name,emp_salary,is_active,emp_department) VALUES(eid,ename,esalary,eis_active,edepart);
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `pro_insert` (`proid` INT, `proname` VARCHAR(30), `proprice` INT)   BEGIN
+    INSERT INTO product(product_id,product_name,product_price) VALUES(proid,proname,proprice);
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `student_insert` (IN `sid` INT, IN `sname` VARCHAR(30), IN `semail` VARCHAR(30), IN `sage` INT)   BEGIN
+    INSERT INTO student(student_id,student_name,student_email,student_age) VALUES(sid,sname,semail,sage);
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `student_update` (`sid` INT, `sname` VARCHAR(30), `semail` VARCHAR(30), `sage` INT)   BEGIN
+    UPDATE student
+    SET student_name=sname,
+    student_email=semail,
+    student_age=sage
+    WHERE student_id=sid;
+    END$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `stu_fetch` ()   BEGIN
+SELECT * FROM student;
+END$$
+
+DELIMITER ;
+
 -- --------------------------------------------------------
 
 --
@@ -29,19 +74,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `course` (
   `course_id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `duration` int(11) NOT NULL,
-  `fees` int(11) NOT NULL
+  `course_name` varchar(20) NOT NULL,
+  `course_duration` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`course_id`, `name`, `duration`, `fees`) VALUES
-(1, 'bba', 3, 20000),
-(2, 'bcom', 2, 10000),
-(3, 'btech', 3, 30000);
+INSERT INTO `course` (`course_id`, `course_name`, `course_duration`) VALUES
+(1, 'PHD', 5),
+(2, 'DS', 3),
+(3, 'IB', 5);
 
 -- --------------------------------------------------------
 
@@ -51,24 +95,22 @@ INSERT INTO `course` (`course_id`, `name`, `duration`, `fees`) VALUES
 
 CREATE TABLE `employee` (
   `emp_id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `salary` int(11) NOT NULL,
-  `department` varchar(20) NOT NULL,
-  `hire_date` int(11) NOT NULL,
-  `is_active` tinyint(1) DEFAULT NULL
+  `emp_name` varchar(30) NOT NULL,
+  `emp_salary` int(11) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `emp_department` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employee` (`emp_id`, `name`, `salary`, `department`, `hire_date`, `is_active`) VALUES
-(1, 'zara', 22000, 'IT', 17, 1),
-(2, 'mehta', 39000, 'HR', 20, 1),
-(3, 'diku', 52000, 'HR', 22, 1),
-(4, 'vijay', 55000, 'IT', 12, 1),
-(5, 'arzoo', 12000, 'SALES', 13, 1),
-(6, 'nafiza', 22000, 'SALES', 19, 1);
+INSERT INTO `employee` (`emp_id`, `emp_name`, `emp_salary`, `is_active`, `emp_department`) VALUES
+(1, 'alpha', 20000, 1, 'IT'),
+(2, 'beta', 40000, 1, 'IT'),
+(3, 'gamma', 50000, 1, 'HR'),
+(4, 'chala', 11000, 1, 'HR'),
+(6, 'dala', 55000, 1, 'SALES');
 
 -- --------------------------------------------------------
 
@@ -77,8 +119,8 @@ INSERT INTO `employee` (`emp_id`, `name`, `salary`, `department`, `hire_date`, `
 --
 
 CREATE TABLE `enrollment` (
-  `enroll_id` int(11) NOT NULL,
-  `pupil_id` int(11) DEFAULT NULL,
+  `enrollment_id` int(11) NOT NULL,
+  `student_id` int(11) DEFAULT NULL,
   `course_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -86,110 +128,86 @@ CREATE TABLE `enrollment` (
 -- Dumping data for table `enrollment`
 --
 
-INSERT INTO `enrollment` (`enroll_id`, `pupil_id`, `course_id`) VALUES
+INSERT INTO `enrollment` (`enrollment_id`, `student_id`, `course_id`) VALUES
+(1, 1, 3),
 (2, 2, 2),
-(3, 3, 3),
-(4, 4, 3),
-(5, 5, 1);
+(4, 4, 1),
+(5, 5, 3),
+(7, 7, 2),
+(8, 3, 2),
+(9, 6, 3);
 
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `high_sal_emp`
--- (See below for the actual view)
---
-CREATE TABLE `high_sal_emp` (
-`emp_id` int(11)
-,`name` varchar(30)
-,`salary` int(11)
-,`department` varchar(20)
-,`hire_date` int(11)
-,`is_active` tinyint(1)
-);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `products`
+-- Table structure for table `product`
 --
 
-CREATE TABLE `products` (
-  `prod_id` int(11) NOT NULL,
+CREATE TABLE `product` (
+  `product_id` int(11) NOT NULL,
   `product_name` varchar(30) NOT NULL,
-  `price` int(11) NOT NULL,
-  `stock` tinyint(1) NOT NULL,
-  `category` varchar(30) NOT NULL,
-  `created_at` varchar(20) NOT NULL
+  `product_price` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `products`
+-- Dumping data for table `product`
 --
 
-INSERT INTO `products` (`prod_id`, `product_name`, `price`, `stock`, `category`, `created_at`) VALUES
-(1, 'GOKU', 2000, 1, 'TOYS', 'APRIL'),
-(3, 'LEMON', 20, 1, 'VEGETABLES', 'FEB'),
-(4, 'TOMATO', 30, 1, 'VEGETABLES', 'FEB'),
-(5, 'BOOK', 30, 1, 'STATIONARY', 'DEC'),
-(6, 'PEN', 50, 1, 'STATIONARY', 'DEC'),
-(7, 'WAFFER', 10, 1, 'GROCERY', 'MAY'),
-(8, 'BISCUIT', 50, 1, 'GROCERY', 'MAY');
+INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES
+(1, 'apple', 30),
+(2, 'banana', 20),
+(3, 'mango', 50),
+(4, 'pencil', 10),
+(5, 'brush', 20),
+(6, 'aeroplane', 3000),
+(7, 'stimmer', 2000),
+(8, 'butterfly', 500);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pupil`
+-- Table structure for table `student`
 --
 
-CREATE TABLE `pupil` (
-  `pupil_id` int(11) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `age` int(11) NOT NULL,
-  `course` varchar(20) NOT NULL,
-  `created_at` varchar(20) NOT NULL
+CREATE TABLE `student` (
+  `student_id` int(11) NOT NULL,
+  `student_name` varchar(30) NOT NULL,
+  `student_email` varchar(30) DEFAULT NULL,
+  `student_age` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pupil`
+-- Dumping data for table `student`
 --
 
-INSERT INTO `pupil` (`pupil_id`, `name`, `email`, `age`, `course`, `created_at`) VALUES
-(2, 'zoya', 'zoya1', 21, 'bcom', '2024'),
-(3, 'lion', 'lion1', 22, 'btech', '2025'),
-(4, 'rabbit', 'rabbit1', 23, 'mba', '2023'),
-(5, 'mouse', 'dear1', 24, 'bcom', '2026');
+INSERT INTO `student` (`student_id`, `student_name`, `student_email`, `student_age`) VALUES
+(1, 'ajay', 'ajay1', 23),
+(2, 'shera', 'shera1', 33),
+(3, 'hero', 'hero1', 29),
+(4, 'zara', 'zara07', 22),
+(5, 'shrinil', 'shrinil1', 29),
+(6, 'jani', 'jani1', 22),
+(7, 'charan', 'charan1', 29);
 
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `pupil_course_details`
+-- Stand-in structure for view `student_course`
 -- (See below for the actual view)
 --
-CREATE TABLE `pupil_course_details` (
-`pupil_id` int(11)
-,`pupil_name` varchar(30)
-,`course_id` int(11)
-,`name` varchar(30)
+CREATE TABLE `student_course` (
+`student_name` varchar(30)
+,`course_name` varchar(20)
 );
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `high_sal_emp`
+-- Structure for view `student_course`
 --
-DROP TABLE IF EXISTS `high_sal_emp`;
+DROP TABLE IF EXISTS `student_course`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `high_sal_emp`  AS SELECT `employee`.`emp_id` AS `emp_id`, `employee`.`name` AS `name`, `employee`.`salary` AS `salary`, `employee`.`department` AS `department`, `employee`.`hire_date` AS `hire_date`, `employee`.`is_active` AS `is_active` FROM `employee` WHERE `employee`.`salary` > '20000' ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `pupil_course_details`
---
-DROP TABLE IF EXISTS `pupil_course_details`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `pupil_course_details`  AS SELECT `p`.`pupil_id` AS `pupil_id`, `p`.`name` AS `pupil_name`, `c`.`course_id` AS `course_id`, `c`.`name` AS `name` FROM ((`enrollment` `e` join `pupil` `p` on(`e`.`pupil_id` = `p`.`pupil_id`)) join `course` `c` on(`e`.`course_id` = `c`.`course_id`)) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `student_course`  AS SELECT `student`.`student_name` AS `student_name`, `course`.`course_name` AS `course_name` FROM ((`enrollment` join `student` on(`enrollment`.`student_id` = `student`.`student_id`)) join `course` on(`enrollment`.`course_id` = `course`.`course_id`)) ;
 
 --
 -- Indexes for dumped tables
@@ -199,36 +217,35 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 -- Indexes for table `course`
 --
 ALTER TABLE `course`
-  ADD PRIMARY KEY (`course_id`);
+  ADD PRIMARY KEY (`course_id`),
+  ADD KEY `course_index` (`course_name`);
 
 --
 -- Indexes for table `employee`
 --
 ALTER TABLE `employee`
-  ADD PRIMARY KEY (`emp_id`),
-  ADD KEY `emp_dep_sal` (`department`,`salary`);
+  ADD PRIMARY KEY (`emp_id`);
 
 --
 -- Indexes for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  ADD PRIMARY KEY (`enroll_id`),
-  ADD KEY `pupil_id` (`pupil_id`),
+  ADD PRIMARY KEY (`enrollment_id`),
+  ADD KEY `student_id` (`student_id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `products`
+-- Indexes for table `product`
 --
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`prod_id`);
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`product_id`);
 
 --
--- Indexes for table `pupil`
+-- Indexes for table `student`
 --
-ALTER TABLE `pupil`
-  ADD PRIMARY KEY (`pupil_id`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD KEY `pupil_email` (`email`);
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`student_id`),
+  ADD KEY `student_index` (`student_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -250,19 +267,19 @@ ALTER TABLE `employee`
 -- AUTO_INCREMENT for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  MODIFY `enroll_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `enrollment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT for table `product`
 --
-ALTER TABLE `products`
-  MODIFY `prod_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `product`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `pupil`
+-- AUTO_INCREMENT for table `student`
 --
-ALTER TABLE `pupil`
-  MODIFY `pupil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `student`
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
@@ -272,7 +289,7 @@ ALTER TABLE `pupil`
 -- Constraints for table `enrollment`
 --
 ALTER TABLE `enrollment`
-  ADD CONSTRAINT `enrollment_ibfk_1` FOREIGN KEY (`pupil_id`) REFERENCES `pupil` (`pupil_id`),
+  ADD CONSTRAINT `enrollment_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`),
   ADD CONSTRAINT `enrollment_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `course` (`course_id`);
 COMMIT;
 

@@ -1,0 +1,107 @@
+PROCEDURE(COLLECTION OF QUERY):- PYTHON FUNCTION - FUNCTION - TASK PERFORM.
+
+-DEF LOGIN(): //COLLECTION OF CODE 10 LINES CALL FROM OTHER FILE WHERE LOGIN CODE IS ORIGINALLY WRITTEN.IT IS REUSABLE WHEN EVER YOU WANT LOGIN.
+MEANS YOU DON'T HAVE TO WRITE THE SAME LOGIN IN NEW FILE JUST CALL THE DEF LOGIN FUNCTION IN NEW FILE AND ALL 10 RIGINAL CODE OF LOGIN WILL BE CALLED IN NEW FILE.
+
+MYSQL-->CUSTOMER DATA INSERT-->EVERY TIME WE HAVE TO WRITE QUERY.
+IN PROCEDURE-->INSERT QUERY // THEN CALL PROCEDURE EVERYTIME.REUSABLE.
+NO NEED TO WRITE CODE AGAIN AND AGAIN IN NEW FILES.
+
+4-->PROCEDURE:-INSERT, DELETE, UPDATE, FETCH.(WRITE IN MYSQL)
+--------------------------------------
+SYNTAX:-(MULTI-FETCH)
+--------------------------------------
+DELIMITER $$      // delimiter(keyword) start.
+
+CREATE PROCEDURE customer_fetch()     //in() you have to give parameter 
+
+BEGIN
+	SELECT * FROM customer;   //in_begin_end write normal our query
+END $$
+
+DELIMITER ;   // delimiter end
+--------------------------------------
+-->NOW TO CALL PROCEDURE(FETCH):-
+CALL customer_fetch();
+--------------------------------------
+SYNTAX:-(SINGLE-FETCH)
+--------------------------------------
+DELIMITER $$      
+
+CREATE PROCEDURE customer_fetch(
+
+	IN xid int
+
+)
+
+BEGIN
+	SELECT * FROM customer WHERE cid=xid;
+END $$
+
+DELIMITER ;
+--------------------------------------
+CALL customer_fetch(4);
+--------------------------------------
+
+SYNTAX:-(DELETE)(ALWAYS DELETE FROM ID-AS UNIQUE)
+--------------------------------------
+DELIMITER $$      
+
+CREATE PROCEDURE customer_delete(
+
+	IN id int        // IN is like ON, id as you wishname int-				cid(original table int)
+
+)
+
+BEGIN
+	DELETE FROM customer WHERE cid=id;   //id==is_for_procedure
+END $$
+
+DELIMITER ;
+--------------------------------------
+-->NOW TO CALL PROCEDURE(DELETE):-
+CALL customer_delete(4);    //4 is id.
+YOU CAN ALSO CALL THIS 2 TIME FOR (4) &(5) ID.
+--------------------------------------
+SYNTAX:-INSERT
+--------------------------------------
+DELIMITER $$
+
+CREATE PROCEDURE student_insert(
+    IN sid int,
+    IN sname varchar(30),
+    IN semail varchar(30),
+    IN sage int
+    )
+BEGIN
+    INSERT INTO student(student_id,student_name,student_email,student_age) VALUES(sid,sname,semail,sage);
+END $$
+    
+DELIMITER;
+
+NOTE-->FIRST IT WILL SHOW SYNTAX ERROR BUT AGAIN EXUCTING WILL SHOW THAT PROCEDURE ALREADY EXISTS.JUST THEN CALL THE PROCEDURE.
+--------------------------------------
+SYNTAX:-UPDATE
+--------------------------------------
+DELIMITER $$
+CREATE PROCEDURE student_update(
+    IN sid int,
+    IN sname varchar(30),
+    IN semail varchar(30),
+    IN sage int 
+    )
+    BEGIN
+
+    UPDATE student
+    SET student_name=sname,
+    student_email=semail,
+    student_age=sage
+    WHERE student_id=sid;
+
+    END $$
+    DELIMITER;
+
+NOTE-->FIRST IT WILL SHOW SYNTAX ERROR BUT AGAIN EXUCTING WILL SHOW THAT PROCEDURE ALREADY EXISTS.JUST THEN CALL THE PROCEDURE.
+----------------------------------------
+call student_update(id_u_wantto_updt,sname,semail,sage)
+----------------------------------------

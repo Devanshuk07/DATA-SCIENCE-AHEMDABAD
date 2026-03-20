@@ -14,11 +14,11 @@
 
 ##### CREATE TABLE student(
 
-##### ID int AUTO\_INCREMENT,
+##### studentid int AUTO\_INCREMENT,
 
 ##### name varchar(30) NOT NULL,
 
-##### PRIMARY KEY(id)
+##### PRIMARY KEY(studentid)
 
 ##### )
 
@@ -34,7 +34,7 @@
 
 
 
-##### FORIEGN KEY(studentid) REFERENCE student(id)       --(from student table id).
+##### FORIEGN KEY(studentid) REFERENCE student(studentid)       --(from student table id).
 
 ##### PRIMERY KEY(id)
 
@@ -42,7 +42,7 @@
 
 
 
-NOW IF A STUDENT BUY A COURSE THEN WE HAVE TO LINK BOTH TABEL.
+NOW IF A STUDENT BUY A COURSE THEN WE HAVE TO LINK BOTH TABLE.
 
 SO LINKING ALWAYS HAPPENS THROUGH ID.BOTH TABLE ID.
 
@@ -74,21 +74,17 @@ SO LINKING ALWAYS HAPPENS THROUGH ID.BOTH TABLE ID.
 
 ###### CREATE TABLE enrollment(
 
-###### &nbsp;  eid int AUTO\_INCREMENT,
+######    eid int AUTO\_INCREMENT,
 
-###### &nbsp;  sid int,     //ALWAYS USE STUDENT\_ID(PRIMARY KEY COLUMN ONLY)
+######    sid int,     //ALWAYS USE STUDENT\_ID(PRIMARY KEY COLUMN ONLY)
 
-###### &nbsp;  cid int,     //OR IT WILL GIVE ERROR.
+######    cid int,     //OR IT WILL GIVE ERROR.
 
-###### &nbsp;  FOREIGN KEY (sid)
+######    FOREIGN KEY (sid) REFRENCES student\_table\_name(sid),
 
-###### &nbsp;  REFRENCES student\_table\_name(sid)
+######    FOREIGN KEY (cid) REFRENCES course\_table\_name(cid),
 
-###### &nbsp;  FOREIGN KEY (cid)
-
-######    REFRENCES course\_table\_name(cid)
-
-###### &nbsp;  PRIMARY KEY(eid)
+######    PRIMARY KEY(eid)
 
  
 
