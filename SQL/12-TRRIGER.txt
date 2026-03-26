@@ -10,9 +10,98 @@ YOU CAN CREATE A TRRIGER FOR:-
 (BEFORE:-BEFORE INSERT OF ANY QUERY IN CUSTOMER TABLE)
 (AFTER:-AFTER THE QUERY IS DONE IN CUSTOMER TABLE)
 
--BEFORE INSERT
--AFTER INSERT
--BEFORE UPDATE
+-BEFORE INSERT-->JUST LIKE EMAIL WITHOUT @ IN EMAIL IT SHOWS ERROR MESS.
+-AFTER INSERT-->AFTER PROPER EMAIL IT SHOWS MESS DONE SUCCESSFULLY.
+-BEFORE UPDATE-->
 -AFTER UPDATE
 -BEFORE DELETE:-(ASK ARE YOU SURE)
 -AFTER DELETE:-(GIVES ALERT DATA DELETE)
+
+-ACTION WE DO IN 1 TABLE  ---> ACTION DONE IN 2 TABLE.
+---------------------------------------------------------
+SYNTAX:-AFTER INSERT
+---------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+AFTER INSERT ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(message-to-show)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+SYNTAX:-BEFORE INSERT
+------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+BEFORE INSERT ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(message-to-show)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+SYNTAX:-BEFORE UPDATE
+------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+BEFORE UPDATE ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(update-mess)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+SYNTAX:-AFTER UPDATE
+------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+AFTER UPDATE ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(update-mess)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+SYNTAX:-BEFORE DELETE
+------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+BEFORE DELETE ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(bef-delete-mess)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+SYNTAX:-AFTER DELETE
+------------------------------------------------------
+DELIMITER $$
+CREATE TRIGGER trigger-name
+AFTER DELETE ON table1    //mess-entered-user
+FOR EACH ROW
+
+BEGIN
+INSERT INTO table2(column-name) VALUES(after-delete-mess)  //mess-shown
+END $$
+
+DELIMITER ;
+------------------------------------------------------
+
+
+TO SEE ALL THE TRIGGERS USED IN CURRENT DATABASE
+QUERY:- SHOW TRIGGERS;
+
+QUERY:-SHOW TRIGGERS
+WHERE 'Table' = 'your-table-name';    //every ' ' IS NECESSARY.
+

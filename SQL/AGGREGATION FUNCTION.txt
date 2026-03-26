@@ -1,0 +1,44 @@
+AGGREGATION FUNCTIONS:-
+1)COUNT
+2)AVG
+3)MAX
+4)MIN
+5)SUM
+
+COUNT(QUERY):-
+SELECT COUNT(*) FROM table-name;
+
+MAX(QUERY):-
+SELECT MAX(column-name) FROM table-name;
+SELECT emp-name, MAX(column-name) FROM table-name;
+
+
+MIN(QUERY):-
+SELECT MIN(column-name) FROM table-name;
+SELECT MIN(column-name) AS salary FROM table-name; 
+AS salary-->alternate-name-to-col salary.
+
+AVG(QUERY):-
+SELECT AVG(column-name) FROM table-name;
+
+SUM(QUERY):-
+SELECT SUM(column-name) FROM table-name;
+
+
+$$ OTHER STRING FUNCTION $$
+UPPER:-
+SELECT UPPER(emp-name) FROM table-name
+
+LOWER:-
+SELECT LOWER(emp-name) FROM table-name
+
+LENGTH:-
+SELECT LENGTH(emp-name) FROM table-name
+
+TRIM:-
+SELECT TRIM(column-name) FROM table-name // for left and right both.
+SELECT LTRIM(emp-name) FROM table-name  //for left side space remove.
+SELECT RTRIM(emp-name) FROM table-name  //for right side space remove.
+
+TRIM--> WHEN WE LOG IN IF WE PUT SPACE FRON OR BACK THEN
+TRIM WILL REMOVE SPACE AND THEN SAVE AND NEXT TIME ALLOW TO LOG.

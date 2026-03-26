@@ -1,0 +1,153 @@
+1.SELECT * FROM customer
+WHERE c_city='new york' OR c_grade>100;
+
+2.SELECT * FROM customer
+WHERE c_city='new york' AND c_grade>100;
+
+3.    SELECT order_id, purchase_amount,
+    (purchase_amount / 6000)*100 AS achived_product,    #this is how much of 6000 completed in percentage by *100.
+    100-((purchase_amount / 6000) * 100) AS unachived_product    #this is what is remaining of 6000 in percentage -100.
+    FROM orders WHERE purchase_amount>3000;
+
+4.SELECT SUM(purchase_amount) AS total FROM orders
+
+5.SELECT customer_id,MAX(purchase_amount) AS maximum_purchase
+FROM orders GROUP BY customer_id;
+
+6.SELECT AVG(product_price) AS avg_prod_price FROM product
+
+7.WE HAVE TO CREATE A JOIN OF EMPLOYEE AND DEPARTMENT AS(FIRST_NAME,LAST_NAME,EMP_ID,JOB_ID)IS IN EMPLOYEE TABLE AND DEPARTMENT_LOCATION IS IN DEPARTMENT TABLE.
+
+THEN,
+SELECT first_name,last_name,emp_id,job_id FROM emp_dept
+WHERE dept_location='toranto'
+
+8.SELECT emp_id,first_name,last_name,job_id,salary FROM emp_dept
+WHERE salary<(
+    SELECT min(salary)
+    FROM emp_dept
+    WHERE job_title IN ('sales_manager','cash_manager','assist_manager','help_manager')
+    )
+    AND job_title  NOT IN ('sales_manager','cash_manager','assist_manager','help_manager')
+
+9.TAKING DEPARTMENT ID==119,190
+
+SELECT first_name,last_name,dept_id,dept_name FROM emp_dept
+WHERE dept_id=119 OR dept_id=190
+
+10.TAKING COMMISSION>5000 THEN CALCULATING...
+
+SELECT dept_name,first_name,last_name,dept_id,AVG(salary) AS avg_salary FROM emp_dept
+WHERE commission>5000
+GROUP BY dept_name
+
+11.DEPT ID TAKEN 190 JOB TITLE='HELPER DESK' AND SELECTING THE EMPLOYEE ONLY WHO HAS SAME JOB TITLE 'HELPER'
+
+SELECT first_name, last_name, dept_id, job_id
+FROM emp_dept
+WHERE dept_id = 190 AND job_title='helper'
+
+12.SELECT emp_id, first_name, last_name, salary
+FROM employee
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employee
+);
+
+13.TAKING DEPT_ID=SALES(122)
+
+SELECT dept_id,first_name,job_id,dept_name
+FROM emp_dept
+WHERE dept_id=122
+
+14.SELECT dept_id,first_name,salary
+FROM emp_dept
+WHERE salary > (
+    SELECT salary
+    FROM emp_dept
+    WHERE emp_id=10
+    )
+
+15.DELIMITER $$
+CREATE PROCEDURE dept()
+
+BEGIN
+SELECT dept_id,COUNT(*) AS total_emp
+FROM employee
+GROUP BY dept_id;
+END $$
+DELIMITER ;
+
+16.DELIMITER $$
+CREATE PROCEDURE insert_emp(
+    iemp_id int,
+    ifirst_name varchar(30),
+    ilast_name varchar(30),
+    ijob_id int,
+    imanager_id int,
+    isalary int,
+    icommission int,
+    idept_id int,
+    ijob_title varchar(30)
+    )
+    BEGIN
+    INSERT INTO employee(emp_id,first_name,last_name,job_id,manager_id,salary,commission,dept_id,job_title) VALUES(iemp_id,ifirst_name,ilast_name,ijob_id,imanager_id,isalary,icommission,idept_id,ijob_title);
+    END $$
+    DELIMITER ;
+
+THEN CALL PROCEDURE:-
+
+CALL insert_emp(17,'hirva','mehta',44,1,22000,3000,122,'sales_executive');
+CALL insert_emp(18,'hakim','sura',45,2,12000,1000,190,'general_helper');
+CALL insert_emp(19,'hirva','mehta',46,3,32000,6000,111,'senior_casier')
+
+17.DELIMITER $$
+CREATE PROCEDURE del_emp(
+    edept_id int
+    )
+    BEGIN
+    DELETE FROM employee WHERE dept_id=edept_id;
+    END $$
+    DELIMITER ;
+
+CALL PROCEDURE:-CALL del_emp(190)
+
+18.DELIMITER $$
+CREATE PROCEDURE max_salary()
+    BEGIN
+    SELECT first_name,last_name,dept_id,MAX(salary) AS max_salary 
+    FROM employee 
+    GROUP BY dept_id ;
+    END $$
+    DELIMITER ;
+
+CALL PROCEDURE:-CALL max_salary.
+
+19.DELIMITER $$
+CREATE PROCEDURE promote_emp(
+    pemp_id int,
+    pincri_salary int,
+    pjob varchar(30)
+    )
+    BEGIN
+    UPDATE employee
+    SET job_title=pjob,salary=salary+pincri_salary
+    WHERE emp_id=pemp_id ;
+    END $$
+    DELIMITER ;
+
+CALL PROCEDURE:-CALL promote_emp(11,4000,'senior_cashier')
+
+20.DELIMITER $$
+CREATE PROCEDURE assign_man(
+    pemp_id int,
+    emanager_id int
+    )
+    BEGIN
+    UPDATE employee
+    SET manager_id=emanager_id
+    WHERE emp_id=pemp_id ;
+    END $$
+    DELIMITER ;
+
+CALL PROCEDURE:-CALL assign_man(9,1)
