@@ -1,0 +1,32 @@
+ORDER BY:-(ASCENDING/DESCENDING)
+
+BY DEFAULT WE HAVE,
+FIFO-->FIRST IN FIRST OUT.
+
+BUT IF WE DON'T WANT BY DEFAULT YOU CAN TAKE IT AS ORDER BY.
+-STARTS FROM ASCENDING(ASC)/DESCENDING(DSC).
+
+GROUP BY:-
+EX:-COLUMN WE WANT GROUP BY DEPARMENT.
+WILL WORK ONLY ON THAT DEPARTMENT(1 COLUMN).
+
+WHERE WORKS ON PERTICULAR TABLE/ SELECT FROM table-name WHERE EMP=1
+HAVING WORKS ON PERTICULAR COLUMN ON WHICH YOU HAVE MADE GROUP BY.
+
+RULE:-
+Use = in GROUP BY only for grouping or counting, never for selecting all columns unless you also aggregate them.
+
+Don’t use it expecting it to filter rows — use WHERE to filter rows.
+
+QUERY:-SELECT department, SUM(salary) AS total_salary
+FROM employee
+GROUP BY department
+
+QUERY:-SELECT department, COUNT(*) AS total_count
+FROM employee
+GROUP BY department
+HAVING COUNT(*)>2
+
+QUERY:-SELECT department, AVG(salary) AS total_salary
+FROM employee
+GROUP BY department

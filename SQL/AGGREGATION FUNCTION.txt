@@ -39,6 +39,5 @@ TRIM:-
 SELECT TRIM(column-name) FROM table-name // for left and right both.
 SELECT LTRIM(emp-name) FROM table-name  //for left side space remove.
 SELECT RTRIM(emp-name) FROM table-name  //for right side space remove.
-
 TRIM--> WHEN WE LOG IN IF WE PUT SPACE FRON OR BACK THEN
 TRIM WILL REMOVE SPACE AND THEN SAVE AND NEXT TIME ALLOW TO LOG.
