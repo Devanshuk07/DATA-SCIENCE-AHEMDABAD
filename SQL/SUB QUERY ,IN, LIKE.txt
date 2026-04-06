@@ -1,0 +1,34 @@
+SUBQUERY:-QUERY IN QUERY (NESTED QUERY)
+WHY WE SOULD NOT USE SUBQUERY:-USE JOIN
+DOUBLE TIME WILL BE TAKEN BY MYSQL.
+MYSQL FIRST INNER QUERY THEN OUTER QUERY SO MUCH TIME.
+
+QUERY:-SELECT emp_id, first_name, last_name, salary
+FROM employee
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employee
+);
+
+
+QUERY:-SELECT emp_id, first_name, last_name, salary
+FROM employee
+WHERE salary > (
+    SELECT AVG(salary)
+    FROM employee WHERE dept="it");
+
+
+QUERY:-SELECT emp_name,department
+FROM employee
+WHERE salary IN (SELECT salary FROM employee WHERE department='it' AND salary=70000);
+-----------------------------------------------------------
+QUERY:-(IN MEANS WITHIN)
+SELECT * FROM employee WHERE department IN ('it','hr');
+
+SELECT * FROM employee WHERE department NOT IN ('it','hr');
+-----------------------------------------------------------
+QUERY:-(LIKE IS USED FOR IT STARTS WITH)
+SELECT * FROM employee WHERE name LIKE 'a%'
+
+SELECT * FROM employee WHERE name NOT LIKE 'a%'
+-----------------------------------------------------------
