@@ -1,0 +1,50 @@
+WINDOW FUNCTION:-
+-------------------------------
+WE CAN FETCH ALL ROWS..EVEN AFTER GIVING A CONDITION.
+EARLIER WE GIVE CONDITION ANDD IT GIVES 3-4 ROWS,COLUMN
+BUT WITH WINDOW FUNCTION WE CAN GET ALL TABLE.
+
+👉 Around 10–12 commonly used window functions
+
+🎯 Must Learn (Top 6)
+RANK()
+DENSE_RANK()
+ROW_NUMBER()
+LAG()
+LEAD()
+NTILE()
+OTHER MATHS FUNCTION IS ALSO USED BEFORE OVER.
+-Scalar mathematical functions such as ABS(), SQRT(), POWER(), or ROUND() cannot directly use the OVER() clause.
+
+Only aggregate and ranking functions can be used with the OVER() clause.
+
+OVER--ON WHICH DATA WE WANT TO WORK.
+GROUP BY → combines rows (reduces data)
+OVER() → keeps rows (adds extra conditional column)
+
+SELECT * FROM table-name
+GROUP BY department
+
+PARITION IS USED AS GROUP BY.
+QUERY:-
+SELECT emp_name,department,AVG(salary) like AS you cannot use.
+over (PARTITION BY department) AS dept_avg
+FROM employee;
+
+DO NOT USE ALIAS BEFORE OVER.YOU CAN USE WINDOWS FUNCTION BEFORE OVER.
+
+QUERY:-
+SELECT emp_name,salary,RANK()
+over (ORDER BY salary DESC) AS ranking
+FROM employee
+
+RANK() IS USED TO ASSIGN RANKING (POSITION)TO ROWS BASED ON SAME ORDER.
+RANK() → COMPETITION RANKING-->1,2,2,4(IF ANY HAVE SAME SALARY)
+DENSE_RANK() → NO GAPS-->1,2,2,3,4
+ROW_NUMBER() → UNIQUE NUMBERING--->1,2,3,4
+NTILE(n) → DIVIDES ROWS INTO GROUPS (LIKE TOP 4 BUCKETS)
+
+LAG():-Gets previous row value
+LEAD():-GETS NEXT ROW VALUE.
+
+THIS ALL CAN BE USED BEFORE OVER.

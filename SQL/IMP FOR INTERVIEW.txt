@@ -1,0 +1,40 @@
+you should know:-
+python machine dep,gen  AI and agentic--contribute here.
+library not imp.--> for DA course only.
+-------------------------------
+index
+
+join---m.m. imp
+
+view
+
+procedure
+
+cta
+
+aggregation
+
+group by
+
+sub query.
+
+------------------------
+theory
+------------------------
+rdbms vs no sql//orm 
+normalization
+acid property
+architecture of sql query.
+
+DS
+python,machine le,deep learning, gen ai, agentic ai,
+
+you are --->ai,ml developer.
+
+
+dsa-->data structure algoridm
+deployment
+api-->with formtend call.
+aws server deployyy.
+
+works end-to-end.

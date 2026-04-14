@@ -24,16 +24,22 @@ SELECT AVG(column-name) FROM table-name;
 SUM(QUERY):-
 SELECT SUM(column-name) FROM table-name;
 
-
+----------------------------------------------------
 $$ OTHER STRING FUNCTION $$
+----------------------------------------------------
 UPPER:-
 SELECT UPPER(emp-name) FROM table-name
+--UPPER() converts every lowercase letter in a string into its uppercase equivalent.
+
 
 LOWER:-
 SELECT LOWER(emp-name) FROM table-name
+-LOWER() converts every uppercase letter in a string into its lowercase equivalent.
 
 LENGTH:-
 SELECT LENGTH(emp-name) FROM table-name
+-The LENGTH() function returns the number of characters (or bytes, depending on the database system) in a string.
+
 
 TRIM:-
 SELECT TRIM(column-name) FROM table-name // for left and right both.

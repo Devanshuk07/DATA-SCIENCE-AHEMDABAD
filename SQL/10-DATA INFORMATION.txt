@@ -13,7 +13,7 @@ ODM--> OBJECT DOCUMENT MAPPING // MONGO_DB
 
 TO STORE USER DATA IN DATABASE THERE IS 2 OPTION:-
 
-(SQL BIGGEST PROBLEM-->SQL QUERY.DIFFERNET FOR JAVA,HTML)
+(SQL BIGGEST PROBLEM-->SQL QUERY.DIFFERENT FOR JAVA,HTML)
 1) WITH PYTHON MERGE--->SQL QUERY.(NOT USED IN INDUSTRY NOW)
 	-MADE WEBSITE. (BACKEND->PYTHON,FRONTEND->JAVASCRIPT)
 	-MADE MOBILE APP--> ANDROID APP(JAVA/NO PYTHON)//IOS(SWIFT/NOPYTHON).(THEN GIVEN TO CUSTOMER)
@@ -46,3 +46,13 @@ EX- CHAT GPT--LOGIN(REQ)--ORM(CACHING)(USE INTERNAL THINGS,ABOVE)-MYSQL.DB
 
   ODM--->OBJECT DOCUMENT MAPPING--NO SQL--MONGODB(USING THIS NOW IN INDUSTRIES.)
      IN ODM TABLE IS TOLD AS DOCUMENT.
+
+
+| Feature        | ORM (Object-Relational Mapping)      | ODM (Object-Document Mapping)               |
+| -------------- | ------------------------------------ | ------------------------------------------- |
+| Database Type  | Relational Databases (SQL)           | NoSQL Document Databases                    |
+| Data Format    | Tables (rows and columns)            | Documents (JSON/BSON)                       |
+| Schema         | Fixed and structured                 | Flexible and dynamic                        |
+| Relationships  | Uses joins and foreign keys          | Uses embedded or referenced documents       |
+| Query Language | SQL                                  | NoSQL queries                               |
+| Use Case       | Banking systems, ERP, inventory apps | Real-time apps, big data, content platforms |

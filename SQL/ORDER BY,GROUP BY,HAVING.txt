@@ -117,14 +117,3 @@ DISTINCT:- FOR UNIQUENESS.
 
 QUERY:-SELECT DISTINCT column-name FROM table-name.
 --------------------------------------------
-SUBQUERY:-QUERY IN QUERY (NESTED QUERY)
-WHY WE SOULD NOT USE SUBQUERY:-USE JOIN
-DOUBLE TIME WILL BE TAKEN BY MYSQL.
-MYSQL FIRST INNER QUERY THEN OUTER QUERY SO MUCH TIME.
-
-QUERY:-SELECT emp_id, first_name, last_name, salary
-FROM employee
-WHERE salary > (
-    SELECT AVG(salary)
-    FROM employee
-);

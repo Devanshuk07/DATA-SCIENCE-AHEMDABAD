@@ -27,7 +27,7 @@ AFTER INSERT ON table1    //mess-entered-user
 FOR EACH ROW
 
 BEGIN
-INSERT INTO table2(column-name) VALUES(message-to-show)  //mess-shown
+INSERT INTO table2(mess-column-name) VALUES(message-to-show)  //mess-shown
 END $$
 
 DELIMITER ;
@@ -40,7 +40,7 @@ BEFORE INSERT ON table1    //mess-entered-user
 FOR EACH ROW
 
 BEGIN
-INSERT INTO table2(column-name) VALUES(message-to-show)  //mess-shown
+INSERT INTO table2(mess-column-name) VALUES(message-to-show)  //mess-shown
 END $$
 
 DELIMITER ;
@@ -53,7 +53,7 @@ BEFORE UPDATE ON table1    //mess-entered-user
 FOR EACH ROW
 
 BEGIN
-INSERT INTO table2(column-name) VALUES(update-mess)  //mess-shown
+INSERT INTO table2(mess-column-name) VALUES(update-mess)  //mess-shown
 END $$
 
 DELIMITER ;
