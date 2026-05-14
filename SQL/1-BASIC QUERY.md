@@ -146,11 +146,11 @@ INSERT INTO student (name,course,address,pincode,age,coursefees,day,dateofbirth)
 
 
 
-### QUERY:-(SELECT \\\* FROM)(WHERE)
+### QUERY:-(SELECT \* FROM)(WHERE)
 
 
 
-##### SELECT \\\* FROM customer WHERE name='jay'   (ALWAYS USE ID AFTER WHERE)(AS NAME HAS MANY NAME LIKE JAY SO IT WILL RETURN EVERY QUERY).
+##### SELECT \* FROM customer WHERE name='jay'   (ALWAYS USE ID AFTER WHERE)(AS NAME HAS MANY NAME LIKE JAY SO IT WILL RETURN EVERY QUERY).
 
 
 
@@ -203,6 +203,10 @@ INSERT INTO student (name,course,address,pincode,age,coursefees,day,dateofbirth)
 
 
 ### QUERY:-(UPDATE SET)(WHERE)
+
+##### 
+
+##### UPDATE table-name SET column-name="value" ,column-name="value" WHERE id=3.
 
 
 

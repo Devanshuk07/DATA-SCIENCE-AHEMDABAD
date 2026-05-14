@@ -30,11 +30,11 @@
 
 ##### name VARCHAR(40) NOT NULL,
 
-##### studentid int      --THIS IS NOT COURSE COLUMN BUT WILL SHOW COLUMN FOR STUDENTID(we want to create the part of student table in course so).
+##### sid int      --THIS IS NOT COURSE COLUMN BUT WILL SHOW COLUMN FOR STUDENTID(we want to create the part of student table in course so).
 
 
 
-##### FORIEGN KEY(studentid) REFERENCE student(studentid)       --(from student table id).
+##### FORIEGN KEY(sid)(name given in this table) REFERENCE student(studentid)(original primary key in student table)--(from student table id).
 
 ##### PRIMERY KEY(id)
 

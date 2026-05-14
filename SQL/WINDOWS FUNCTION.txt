@@ -38,6 +38,11 @@ SELECT emp_name,salary,RANK()
 over (ORDER BY salary DESC) AS ranking
 FROM employee
 
+QUERY:-(PARTION AND ORDER BY)
+SELECT emp_name,emp_salary,emp_department,dense_rank()
+over(PARTITION BY emp_department ORDER BY emp_salary DESC) AS rank
+FROM employee;
+
 RANK() IS USED TO ASSIGN RANKING (POSITION)TO ROWS BASED ON SAME ORDER.
 RANK() → COMPETITION RANKING-->1,2,2,4(IF ANY HAVE SAME SALARY)
 DENSE_RANK() → NO GAPS-->1,2,2,3,4
