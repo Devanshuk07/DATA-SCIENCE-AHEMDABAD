@@ -1,0 +1,37 @@
+ASSIGNMENT QUESTIONS:-
+
+1)You are setting up a new database for the Zomato project. Which SQL 
+command creates a new database called analytics_db?
+
+-create database analytics_db
+
+2)You add a restaurant_id column to the restaurants table as its primary key. 
+What is a primary key, and why must its values be unique?
+
+-primary key is the unique key that is given to one column of the table.
+every table has only one primary key.it is unique because it is differ from every other column and also unique in its column also.its value must be unique because when ever we try to use data in table we will use it by that unique value only. For example:-a table has emp_id, emp_name, emp_salary... Then employee name can we same even two same name employee has same salary that is also possible but emp_id is always unique like this.primary key we have to give to that column that has always have unique values.
+
+3)The ratings table references restaurant_id from the restaurants table. What is 
+a foreign key, and what integrity rule does it enforce?
+
+-foreign key-it is used to join, or access two table data at a same time or link that both table is used for that.
+
+syntax:- foreign key(1table_column_name) refrences 2table_name(2table_column_name)
+
+integrity rule:-a forign key must be a primary key of another table.
+
+4)You apply a NOT NULL constraint to the restaurant_name column. What kind of 
+data entry does this constraint prevent?
+
+-NOT NULL is used to prevent user from leaving a null value to particular position. It means you cannot unfill the field and go to next field you have to compulsory write restaurant_name in a particular place. And trying to leave it as blank will give you error and not execute the further code.
+
+5)You draw an ER diagram before writing any SQL. What does an ER diagram 
+represent in relational database design?
+
+-Before writing SQL, it helps us:
+
+Understand the data requirements.
+Identify tables.
+Decide Primary Keys and Foreign Keys.
+Define relationships (1:1, 1:M, M:M).
+Avoid database design mistakes.
