@@ -1,0 +1,1001 @@
+Customer Name,State,Order Time,Amount (INR)
+Rahul Sharma,Bihar,18:47,546.36
+Rahul Roy,Bihar,19:27,371.88
+Vivaan Sharma,Maharashtra,19:01,629.44
+Vikram Singh,Bihar,16:14,237.36
+Kabir Gupta,Rajasthan,19:51,400.86
+Rohan Kulkarni,Tamil Nadu,18:48,508.27
+Ishita Patel,Maharashtra,16:22,536.26
+Sanjay Mehta,Gujarat,18:59,198.67
+Meera Patel,West Bengal,17:56,664.09
+Pooja Gupta,Delhi,18:14,367.1
+Neha Patel,Delhi,20:29,289.04
+Pooja Verma,Punjab,16:44,631.56
+Aditya Gupta,Madhya Pradesh,21:10,675.93
+Kabir Iyer,Rajasthan,23:35,403.08
+Ananya Roy,Punjab,21:14,160.14
+Vivaan Yadav,Punjab,18:58,458.76
+Ritika Reddy,Bihar,17:25,661.36
+Kabir Verma,Rajasthan,22:34,648.84
+Sneha Kulkarni,Uttar Pradesh,15:23,523.56
+Ananya Verma,West Bengal,13:55,432.31
+Rahul Verma,Madhya Pradesh,21:38,649.56
+Aditya Iyer,Tamil Nadu,16:16,305.39
+Vikram Mishra,Gujarat,18:56,339.59
+Vikram Yadav,Rajasthan,19:18,256.98
+Arjun Verma,Kerala,23:46,425.87
+Sneha Das,Karnataka,17:40,415.88
+Neha Mishra,Madhya Pradesh,17:23,414.23
+Rohan Das,West Bengal,22:31,300.77
+Aarav Patel,Punjab,23:19,185.41
+Ananya Sharma,Delhi,23:05,117.44
+Diya Mishra,Maharashtra,22:08,389.38
+Karan Roy,Kerala,20:33,384.55
+Sanjay Iyer,Delhi,23:44,289.55
+Priya Kulkarni,Rajasthan,15:23,579.28
+Kabir Reddy,West Bengal,16:04,460.78
+Ishita Sharma,Uttar Pradesh,15:00,340.28
+Aditya Kulkarni,Madhya Pradesh,20:02,444.31
+Ishita Patel,West Bengal,19:13,686.9
+Vikram Verma,Bihar,22:30,327.69
+Ananya Yadav,Kerala,19:06,310.56
+Arjun Joshi,Tamil Nadu,13:03,610.5
+Rahul Sharma,Tamil Nadu,18:06,99.78
+Ananya Singh,Delhi,17:11,397.64
+Sneha Nair,Delhi,19:51,369.44
+Vikram Patel,Gujarat,16:00,236.61
+Aditya Reddy,Delhi,20:13,599.52
+Meera Reddy,Gujarat,19:24,430.16
+Sneha Reddy,Kerala,17:46,691.21
+Vikram Roy,Bihar,17:13,429.77
+Vivaan Gupta,Bihar,14:03,341.69
+Vivaan Gupta,Kerala,13:10,413.69
+Vivaan Das,Maharashtra,19:04,365.47
+Ananya Iyer,Maharashtra,22:37,336.13
+Sanjay Sharma,Uttar Pradesh,22:36,549.79
+Aisha Joshi,Rajasthan,20:15,693.96
+Sneha Iyer,Karnataka,17:20,286.01
+Aditya Sharma,Kerala,16:06,260.23
+Aditya Das,Delhi,17:22,416.45
+Aditya Reddy,Delhi,17:53,497.1
+Vikram Kulkarni,Rajasthan,12:41,80.0
+Aisha Sharma,Madhya Pradesh,20:42,281.46
+Rahul Reddy,Karnataka,18:47,796.41
+Vikram Verma,Rajasthan,18:21,541.34
+Priya Roy,Madhya Pradesh,21:16,249.53
+Vivaan Patel,Madhya Pradesh,16:00,486.92
+Ishita Yadav,Karnataka,17:47,313.54
+Kabir Das,Bihar,18:04,431.01
+Karan Das,Gujarat,21:09,214.91
+Arjun Verma,Gujarat,16:50,779.89
+Vivaan Reddy,Punjab,19:06,552.12
+Pooja Yadav,West Bengal,21:39,297.68
+Karan Reddy,Delhi,23:51,80.0
+Rohan Reddy,Tamil Nadu,23:21,465.6
+Arjun Yadav,Madhya Pradesh,22:17,172.36
+Rohan Yadav,Bihar,23:54,649.34
+Diya Singh,Delhi,20:19,237.33
+Ananya Singh,Gujarat,17:17,266.75
+Aditya Yadav,Rajasthan,16:43,592.88
+Vikram Joshi,Gujarat,23:11,736.61
+Ritika Mehta,Gujarat,21:46,541.03
+Ishita Iyer,Uttar Pradesh,20:57,411.18
+Ritika Singh,Rajasthan,22:33,473.04
+Vikram Roy,Bihar,23:12,312.15
+Pooja Iyer,Maharashtra,23:39,292.02
+Ishita Roy,Maharashtra,18:19,270.61
+Arjun Joshi,Tamil Nadu,17:12,203.6
+Arjun Roy,Tamil Nadu,16:39,80.0
+Ritika Mehta,Tamil Nadu,18:18,418.48
+Priya Iyer,Uttar Pradesh,16:28,321.39
+Kabir Roy,Delhi,13:50,397.56
+Rohan Roy,Maharashtra,18:39,679.83
+Ishita Patel,Delhi,18:12,306.41
+Karan Sharma,Gujarat,19:54,624.27
+Aditya Nair,Tamil Nadu,21:45,265.4
+Meera Nair,Tamil Nadu,19:00,682.79
+Rahul Yadav,Tamil Nadu,20:44,738.81
+Aisha Nair,Gujarat,12:07,278.11
+Kabir Verma,Kerala,14:38,80.0
+Ishita Yadav,Kerala,15:32,233.45
+Arjun Mishra,West Bengal,17:55,455.33
+Diya Nair,Rajasthan,19:17,80.0
+Aisha Nair,Madhya Pradesh,19:45,613.36
+Neha Singh,Rajasthan,15:05,746.54
+Karan Verma,Delhi,17:13,489.51
+Aditya Iyer,Tamil Nadu,17:03,596.13
+Priya Mishra,Tamil Nadu,15:44,617.43
+Aarav Mishra,Uttar Pradesh,18:22,433.37
+Neha Yadav,Tamil Nadu,23:26,80.0
+Vikram Kulkarni,Bihar,15:14,350.05
+Diya Singh,Rajasthan,18:21,437.14
+Meera Kulkarni,Karnataka,22:39,80.0
+Vikram Sharma,Tamil Nadu,15:05,275.09
+Arjun Verma,Kerala,19:20,547.07
+Priya Nair,Punjab,15:17,735.82
+Arjun Mehta,Maharashtra,14:03,475.52
+Pooja Singh,Madhya Pradesh,23:02,608.91
+Aarav Singh,Delhi,21:15,207.55
+Karan Nair,Madhya Pradesh,23:29,707.97
+Sneha Yadav,Punjab,21:47,633.98
+Rahul Yadav,Karnataka,20:01,401.07
+Neha Gupta,Madhya Pradesh,21:45,324.62
+Priya Patel,Uttar Pradesh,17:06,184.52
+Neha Mishra,Madhya Pradesh,17:36,366.06
+Vivaan Joshi,West Bengal,16:32,495.34
+Ishita Sharma,Tamil Nadu,19:23,343.62
+Kabir Kulkarni,Karnataka,14:41,535.48
+Sneha Gupta,West Bengal,19:52,221.12
+Ritika Mehta,Punjab,22:05,147.69
+Sneha Reddy,Kerala,19:39,621.09
+Meera Joshi,Gujarat,16:31,425.71
+Priya Joshi,Rajasthan,15:44,732.74
+Sneha Das,Gujarat,17:15,407.78
+Arjun Nair,West Bengal,19:41,144.65
+Diya Nair,Gujarat,20:44,490.32
+Ananya Mehta,Madhya Pradesh,16:33,320.07
+Pooja Iyer,Bihar,16:29,367.81
+Sneha Mehta,Rajasthan,19:20,705.58
+Rahul Kulkarni,West Bengal,23:12,336.3
+Priya Kulkarni,Kerala,18:48,656.91
+Aisha Gupta,Rajasthan,23:18,378.43
+Ananya Joshi,Karnataka,17:08,687.35
+Sneha Sharma,Gujarat,14:08,328.43
+Diya Patel,Gujarat,15:28,329.06
+Ishita Verma,Gujarat,18:07,778.02
+Aditya Iyer,Kerala,22:03,533.84
+Karan Verma,Uttar Pradesh,20:15,396.13
+Rahul Das,Tamil Nadu,14:14,222.79
+Aisha Iyer,Kerala,21:37,337.78
+Arjun Mehta,Uttar Pradesh,16:47,249.83
+Rahul Yadav,Delhi,17:05,319.88
+Rohan Singh,Karnataka,17:26,386.3
+Kabir Kulkarni,Uttar Pradesh,18:18,428.71
+Neha Kulkarni,Kerala,20:16,476.76
+Ritika Roy,Delhi,15:41,522.31
+Karan Reddy,Rajasthan,19:10,358.59
+Neha Gupta,Bihar,22:28,80.0
+Rahul Nair,Bihar,17:17,592.23
+Aisha Das,Kerala,15:56,512.63
+Arjun Kulkarni,Punjab,18:14,395.01
+Ritika Gupta,Gujarat,23:17,419.28
+Ritika Sharma,Karnataka,14:58,468.17
+Sneha Verma,Uttar Pradesh,13:05,549.48
+Diya Joshi,Tamil Nadu,16:54,652.19
+Rohan Joshi,Tamil Nadu,18:25,280.77
+Vikram Sharma,Kerala,20:07,492.15
+Meera Mishra,West Bengal,19:55,412.3
+Vikram Nair,Tamil Nadu,22:39,492.69
+Diya Roy,Kerala,19:35,298.8
+Karan Reddy,Rajasthan,14:07,525.63
+Aarav Roy,Uttar Pradesh,20:19,150.35
+Vikram Sharma,West Bengal,17:53,490.17
+Rahul Nair,Maharashtra,17:59,336.68
+Neha Das,Bihar,18:30,757.85
+Ananya Nair,West Bengal,20:38,512.34
+Aisha Kulkarni,Karnataka,20:50,310.84
+Arjun Joshi,West Bengal,18:46,432.83
+Neha Mishra,Uttar Pradesh,15:55,292.75
+Karan Nair,West Bengal,16:48,435.9
+Vikram Iyer,Kerala,23:44,271.22
+Ananya Gupta,Tamil Nadu,19:02,729.5
+Ishita Kulkarni,Kerala,17:24,104.14
+Karan Nair,Gujarat,23:21,752.65
+Rahul Mishra,Kerala,23:00,651.84
+Karan Iyer,Madhya Pradesh,20:50,406.68
+Sneha Joshi,Uttar Pradesh,17:54,175.95
+Ishita Mishra,Madhya Pradesh,20:20,283.92
+Diya Mishra,West Bengal,20:40,435.16
+Neha Singh,Bihar,23:48,688.02
+Rahul Nair,Karnataka,16:02,80.0
+Ishita Yadav,Gujarat,18:09,588.03
+Ananya Das,Tamil Nadu,14:10,291.51
+Rohan Patel,Uttar Pradesh,21:15,238.45
+Diya Reddy,Uttar Pradesh,21:16,576.7
+Kabir Mehta,Madhya Pradesh,23:57,439.2
+Neha Roy,West Bengal,20:22,582.76
+Ritika Mehta,Madhya Pradesh,23:29,354.87
+Neha Singh,Tamil Nadu,19:24,351.91
+Ritika Joshi,Uttar Pradesh,17:01,687.53
+Meera Mehta,Gujarat,14:47,309.76
+Vivaan Reddy,Uttar Pradesh,18:57,80.0
+Neha Yadav,Delhi,16:40,315.46
+Priya Gupta,Rajasthan,16:42,161.53
+Karan Roy,Maharashtra,22:19,271.98
+Kabir Sharma,Uttar Pradesh,17:58,491.73
+Neha Joshi,Bihar,17:50,481.02
+Vikram Reddy,Punjab,12:53,343.28
+Rohan Mehta,Kerala,21:55,389.36
+Ishita Yadav,Maharashtra,17:48,434.08
+Ananya Mishra,Madhya Pradesh,17:54,80.0
+Vikram Joshi,Maharashtra,19:34,390.84
+Rahul Nair,Punjab,16:37,182.1
+Meera Mishra,Madhya Pradesh,20:14,388.41
+Diya Sharma,Uttar Pradesh,21:58,266.34
+Sanjay Singh,Madhya Pradesh,23:58,549.76
+Neha Roy,Tamil Nadu,19:02,456.7
+Neha Nair,Maharashtra,23:08,635.65
+Meera Nair,Punjab,16:34,159.5
+Arjun Gupta,Bihar,18:41,80.0
+Rahul Mishra,Kerala,13:17,137.12
+Vivaan Kulkarni,Punjab,19:15,611.12
+Pooja Patel,Madhya Pradesh,14:41,707.03
+Pooja Sharma,Tamil Nadu,17:54,886.48
+Kabir Patel,Madhya Pradesh,20:01,669.87
+Vivaan Yadav,Punjab,19:36,513.31
+Priya Patel,West Bengal,19:55,541.04
+Ananya Joshi,Karnataka,19:17,184.77
+Karan Verma,West Bengal,18:42,531.47
+Aarav Verma,Gujarat,15:37,666.66
+Ishita Sharma,Karnataka,18:26,513.28
+Aisha Patel,Bihar,22:23,496.33
+Aisha Gupta,Maharashtra,16:39,457.84
+Vivaan Kulkarni,Madhya Pradesh,15:01,393.23
+Vivaan Nair,Tamil Nadu,17:45,458.45
+Kabir Patel,Maharashtra,18:08,511.71
+Sneha Gupta,Madhya Pradesh,14:24,274.84
+Sanjay Das,Rajasthan,15:06,490.39
+Rahul Mishra,Madhya Pradesh,16:46,169.68
+Priya Iyer,Kerala,21:52,299.7
+Kabir Iyer,Tamil Nadu,18:20,265.44
+Sneha Joshi,Karnataka,17:05,231.75
+Aditya Patel,Tamil Nadu,23:51,588.17
+Karan Das,Gujarat,15:21,300.5
+Rahul Iyer,Punjab,23:27,114.42
+Vivaan Mehta,Uttar Pradesh,18:32,497.79
+Priya Verma,Madhya Pradesh,13:22,458.97
+Vikram Joshi,Maharashtra,19:51,185.56
+Arjun Mishra,West Bengal,23:39,367.05
+Vikram Sharma,Uttar Pradesh,23:17,274.09
+Aarav Verma,Rajasthan,18:21,272.03
+Pooja Sharma,Karnataka,21:25,250.25
+Aditya Verma,Bihar,18:47,386.65
+Aisha Singh,Tamil Nadu,16:23,499.33
+Neha Kulkarni,Punjab,19:05,190.22
+Vivaan Verma,Karnataka,19:05,362.51
+Sneha Nair,Madhya Pradesh,15:26,533.05
+Sneha Singh,West Bengal,21:18,545.13
+Ritika Nair,West Bengal,18:25,372.39
+Sanjay Sharma,Gujarat,21:49,836.3
+Karan Yadav,Rajasthan,18:31,508.23
+Arjun Verma,Karnataka,15:32,611.91
+Vikram Mishra,Madhya Pradesh,19:55,354.67
+Vivaan Iyer,Gujarat,17:20,438.13
+Ritika Iyer,Uttar Pradesh,15:18,565.42
+Rahul Iyer,Gujarat,20:39,396.7
+Kabir Mishra,Bihar,20:54,382.65
+Rahul Singh,Tamil Nadu,15:25,303.8
+Neha Kulkarni,Punjab,19:04,727.84
+Aisha Roy,Maharashtra,17:49,397.41
+Pooja Joshi,Bihar,23:09,352.74
+Ananya Patel,Karnataka,18:09,531.04
+Aditya Verma,Madhya Pradesh,13:48,431.15
+Ritika Nair,Madhya Pradesh,22:40,313.54
+Sanjay Joshi,Madhya Pradesh,17:30,597.27
+Kabir Roy,Rajasthan,20:22,189.3
+Aisha Patel,Rajasthan,18:23,431.87
+Neha Patel,Madhya Pradesh,22:39,153.42
+Sanjay Das,Tamil Nadu,15:50,473.13
+Vivaan Nair,Uttar Pradesh,17:30,290.67
+Aisha Verma,Gujarat,13:53,520.5
+Ishita Kulkarni,Maharashtra,17:15,416.83
+Kabir Nair,West Bengal,17:23,404.92
+Neha Iyer,Tamil Nadu,19:03,151.88
+Ishita Patel,Punjab,22:18,571.7
+Sneha Kulkarni,Madhya Pradesh,22:09,365.76
+Ishita Patel,Uttar Pradesh,15:19,80.0
+Meera Verma,Uttar Pradesh,18:35,346.78
+Meera Roy,Punjab,20:53,172.77
+Aisha Patel,Madhya Pradesh,17:01,231.71
+Pooja Mehta,Karnataka,21:49,370.28
+Diya Singh,Delhi,20:18,419.98
+Rahul Das,West Bengal,22:02,98.76
+Ishita Reddy,Uttar Pradesh,20:10,548.38
+Rohan Mishra,Bihar,19:10,95.32
+Kabir Sharma,Tamil Nadu,15:28,636.15
+Sanjay Mehta,Bihar,19:15,291.52
+Neha Yadav,Kerala,20:43,352.92
+Ritika Nair,Kerala,19:32,109.97
+Aisha Iyer,Karnataka,21:08,124.59
+Sneha Sharma,Madhya Pradesh,16:59,441.09
+Rahul Kulkarni,West Bengal,20:48,301.34
+Rohan Mehta,Kerala,20:27,363.04
+Aditya Reddy,Delhi,21:59,80.0
+Aarav Iyer,Gujarat,16:24,525.51
+Aditya Joshi,Delhi,23:53,493.3
+Ishita Yadav,Karnataka,20:53,532.61
+Diya Kulkarni,Karnataka,19:39,217.75
+Aarav Reddy,Maharashtra,21:09,434.95
+Vikram Kulkarni,Uttar Pradesh,17:18,404.83
+Ananya Mehta,Maharashtra,21:50,475.51
+Sanjay Nair,Maharashtra,23:38,670.65
+Vikram Sharma,Madhya Pradesh,16:09,407.08
+Neha Iyer,Gujarat,17:26,331.81
+Rohan Roy,Madhya Pradesh,23:04,670.03
+Aisha Das,West Bengal,19:01,211.31
+Meera Mishra,Kerala,21:23,468.1
+Sneha Kulkarni,Gujarat,18:15,472.65
+Rahul Yadav,Uttar Pradesh,18:02,258.85
+Pooja Das,Punjab,19:49,317.09
+Kabir Kulkarni,Kerala,15:04,177.85
+Kabir Sharma,Rajasthan,20:56,723.93
+Vivaan Joshi,Rajasthan,10:34,367.76
+Diya Mehta,Gujarat,19:22,302.79
+Vivaan Mishra,Madhya Pradesh,18:23,500.78
+Arjun Reddy,Tamil Nadu,18:24,80.0
+Ishita Verma,Kerala,17:51,259.04
+Aisha Mehta,Maharashtra,18:38,347.77
+Rohan Das,Rajasthan,18:42,486.3
+Neha Mehta,Kerala,16:44,305.99
+Kabir Joshi,Kerala,23:22,515.63
+Sanjay Iyer,Rajasthan,15:03,175.09
+Aditya Roy,Madhya Pradesh,16:47,540.02
+Rohan Sharma,Karnataka,21:28,199.42
+Vivaan Verma,Maharashtra,19:23,678.11
+Meera Gupta,Gujarat,15:23,253.54
+Pooja Nair,Maharashtra,15:25,320.99
+Ishita Roy,Rajasthan,19:47,508.33
+Rohan Nair,West Bengal,16:16,570.71
+Sneha Kulkarni,Kerala,19:44,661.54
+Diya Singh,Maharashtra,19:11,473.18
+Kabir Patel,Madhya Pradesh,23:42,313.02
+Pooja Kulkarni,Maharashtra,16:19,373.93
+Rohan Kulkarni,Bihar,22:50,306.9
+Pooja Das,Delhi,20:08,503.29
+Ananya Yadav,Kerala,22:23,457.61
+Kabir Yadav,West Bengal,23:04,692.12
+Neha Iyer,Bihar,18:49,204.34
+Arjun Mishra,Uttar Pradesh,23:41,635.56
+Aditya Nair,Kerala,17:56,270.26
+Vikram Roy,Uttar Pradesh,22:27,846.46
+Aisha Reddy,Gujarat,20:19,230.33
+Rohan Verma,Punjab,20:33,368.7
+Neha Mishra,Maharashtra,18:35,675.57
+Sneha Verma,Madhya Pradesh,17:32,630.15
+Rohan Gupta,Uttar Pradesh,21:46,637.55
+Sanjay Joshi,Uttar Pradesh,23:05,511.99
+Vivaan Roy,Uttar Pradesh,18:36,543.33
+Arjun Gupta,Madhya Pradesh,23:34,491.39
+Neha Roy,Rajasthan,13:43,454.79
+Meera Mehta,Kerala,19:28,448.01
+Arjun Nair,Kerala,20:20,655.7
+Ishita Kulkarni,Punjab,20:23,405.31
+Aisha Das,Maharashtra,17:17,603.04
+Kabir Singh,Karnataka,21:24,505.17
+Sanjay Iyer,Delhi,23:52,329.81
+Ishita Reddy,Uttar Pradesh,18:10,305.12
+Diya Das,Kerala,16:01,421.2
+Aditya Iyer,West Bengal,16:37,455.47
+Pooja Sharma,Gujarat,18:53,658.15
+Diya Mehta,West Bengal,20:08,424.41
+Sneha Kulkarni,Punjab,19:25,248.83
+Vivaan Gupta,West Bengal,20:04,634.82
+Meera Das,Kerala,19:39,274.78
+Sanjay Patel,Karnataka,21:50,391.91
+Ishita Das,Punjab,19:32,300.13
+Meera Das,Gujarat,20:21,447.44
+Diya Das,Kerala,22:08,726.47
+Ishita Reddy,Uttar Pradesh,17:39,583.43
+Neha Gupta,Punjab,15:31,410.13
+Ritika Mehta,Kerala,20:43,261.97
+Rahul Iyer,Uttar Pradesh,16:55,780.22
+Aarav Gupta,Kerala,18:49,681.57
+Ritika Gupta,Delhi,18:10,185.59
+Aisha Roy,Bihar,14:09,184.05
+Ananya Sharma,Uttar Pradesh,20:01,392.23
+Kabir Joshi,Tamil Nadu,21:26,644.47
+Aisha Yadav,Uttar Pradesh,23:47,244.94
+Vivaan Kulkarni,Karnataka,15:42,392.95
+Diya Das,Tamil Nadu,18:58,522.22
+Vikram Joshi,West Bengal,15:46,665.41
+Sneha Gupta,Kerala,19:35,546.62
+Neha Singh,Rajasthan,19:44,141.26
+Diya Joshi,Kerala,14:50,761.09
+Sneha Mehta,Maharashtra,15:57,319.63
+Meera Mishra,Punjab,23:18,328.48
+Vivaan Mehta,Bihar,23:41,614.68
+Sneha Kulkarni,Kerala,20:17,749.1
+Vikram Kulkarni,Rajasthan,21:37,609.06
+Ananya Singh,Gujarat,17:40,226.0
+Ananya Sharma,Maharashtra,14:06,568.28
+Karan Sharma,West Bengal,20:41,405.4
+Diya Nair,Madhya Pradesh,21:20,860.76
+Neha Roy,Gujarat,20:36,377.39
+Ananya Das,Bihar,17:58,80.0
+Rohan Iyer,Karnataka,19:53,400.25
+Meera Yadav,Kerala,20:55,695.64
+Neha Reddy,Gujarat,22:06,433.57
+Ishita Mehta,Kerala,22:31,404.58
+Karan Mishra,West Bengal,17:07,443.51
+Ishita Verma,Bihar,16:11,455.44
+Aarav Kulkarni,Punjab,19:48,194.46
+Priya Verma,Uttar Pradesh,22:52,118.42
+Arjun Das,Punjab,22:11,558.81
+Karan Nair,Punjab,19:24,411.73
+Ananya Nair,Rajasthan,21:46,376.53
+Ritika Sharma,Rajasthan,16:03,192.57
+Rahul Nair,Rajasthan,21:59,651.09
+Neha Kulkarni,Maharashtra,14:23,92.61
+Sanjay Singh,Delhi,22:29,365.65
+Sanjay Joshi,Tamil Nadu,17:48,80.0
+Vikram Yadav,Madhya Pradesh,21:43,148.83
+Sanjay Mishra,Maharashtra,15:23,384.79
+Aditya Reddy,Uttar Pradesh,23:57,639.15
+Aisha Singh,Uttar Pradesh,17:54,395.36
+Aisha Nair,Maharashtra,16:31,161.02
+Aditya Reddy,West Bengal,18:08,440.46
+Aisha Iyer,Kerala,15:43,330.0
+Neha Kulkarni,Gujarat,14:47,621.58
+Priya Gupta,Maharashtra,21:04,466.45
+Vikram Sharma,Maharashtra,22:18,402.3
+Arjun Verma,Karnataka,19:41,80.0
+Arjun Joshi,Tamil Nadu,12:24,547.64
+Meera Patel,Madhya Pradesh,23:08,338.07
+Pooja Patel,Karnataka,21:08,411.92
+Ananya Mishra,Gujarat,19:29,80.0
+Vikram Iyer,West Bengal,17:29,509.44
+Pooja Verma,Rajasthan,21:48,760.13
+Rahul Sharma,Madhya Pradesh,14:56,569.09
+Aarav Singh,Delhi,22:28,519.16
+Sanjay Roy,Bihar,20:02,322.98
+Meera Nair,Delhi,14:49,345.43
+Vivaan Verma,West Bengal,21:58,414.62
+Ritika Joshi,Uttar Pradesh,15:20,264.77
+Ananya Mehta,Karnataka,22:26,400.39
+Neha Mehta,Gujarat,15:47,335.95
+Rohan Roy,Madhya Pradesh,15:22,513.01
+Meera Yadav,West Bengal,17:09,589.64
+Neha Iyer,Karnataka,19:54,216.19
+Ananya Mehta,Bihar,21:03,578.11
+Vikram Iyer,Tamil Nadu,17:15,385.98
+Sneha Singh,Punjab,14:54,95.9
+Pooja Patel,West Bengal,18:17,304.47
+Meera Roy,Uttar Pradesh,14:12,199.4
+Ritika Kulkarni,Madhya Pradesh,15:55,345.67
+Ishita Mehta,Gujarat,19:47,533.51
+Rahul Kulkarni,Kerala,22:45,277.84
+Priya Iyer,Delhi,14:24,320.0
+Kabir Das,Madhya Pradesh,17:32,528.42
+Diya Nair,Maharashtra,20:48,147.54
+Ishita Reddy,Delhi,16:36,555.08
+Ananya Kulkarni,Karnataka,22:37,443.25
+Ritika Kulkarni,Tamil Nadu,18:14,534.2
+Meera Gupta,Delhi,14:43,421.15
+Ishita Mehta,Kerala,23:31,366.13
+Kabir Verma,Bihar,19:46,314.73
+Vikram Nair,Karnataka,22:41,307.79
+Vivaan Das,Gujarat,19:52,360.05
+Vivaan Yadav,Gujarat,14:14,601.04
+Aditya Kulkarni,Karnataka,22:23,432.27
+Vivaan Gupta,Madhya Pradesh,16:30,204.1
+Diya Sharma,Gujarat,15:01,382.75
+Aisha Kulkarni,Rajasthan,16:32,387.05
+Arjun Yadav,Karnataka,20:09,470.46
+Ananya Singh,Uttar Pradesh,13:17,365.27
+Meera Patel,Punjab,22:15,369.53
+Ananya Mehta,Madhya Pradesh,19:54,354.9
+Vivaan Patel,Tamil Nadu,16:03,577.07
+Aarav Kulkarni,Karnataka,23:41,592.66
+Ishita Gupta,Maharashtra,23:14,172.14
+Priya Reddy,Bihar,21:02,287.25
+Aditya Roy,Rajasthan,22:02,282.96
+Rohan Reddy,Punjab,21:09,432.05
+Meera Reddy,Maharashtra,17:36,640.89
+Meera Roy,West Bengal,16:08,683.19
+Aditya Das,Bihar,19:27,410.39
+Ananya Mishra,Maharashtra,16:38,679.56
+Meera Yadav,Punjab,21:28,446.62
+Diya Singh,Punjab,16:11,362.87
+Ritika Roy,Tamil Nadu,22:51,548.16
+Ananya Kulkarni,Maharashtra,20:45,471.35
+Karan Kulkarni,Tamil Nadu,18:00,498.05
+Neha Nair,Punjab,19:05,336.62
+Rohan Iyer,Kerala,15:06,344.39
+Aarav Patel,Punjab,15:50,338.93
+Ishita Mishra,Tamil Nadu,22:49,434.41
+Aditya Kulkarni,West Bengal,23:36,140.72
+Aisha Verma,Madhya Pradesh,17:19,487.04
+Sneha Nair,Karnataka,21:26,494.43
+Neha Nair,Maharashtra,14:46,751.27
+Diya Gupta,Uttar Pradesh,19:19,500.66
+Aarav Iyer,Punjab,20:55,272.39
+Ishita Nair,Punjab,13:41,561.57
+Sanjay Verma,Rajasthan,15:12,814.34
+Diya Joshi,Karnataka,23:18,315.4
+Diya Gupta,Delhi,17:50,549.71
+Meera Joshi,Maharashtra,20:34,370.25
+Rohan Roy,West Bengal,23:45,468.83
+Priya Nair,Rajasthan,19:54,360.55
+Arjun Roy,Kerala,20:16,537.3
+Karan Kulkarni,Tamil Nadu,19:38,351.55
+Diya Gupta,Tamil Nadu,12:55,332.56
+Arjun Das,Gujarat,19:57,255.61
+Vikram Gupta,Madhya Pradesh,20:15,375.62
+Pooja Verma,Madhya Pradesh,16:41,269.34
+Meera Yadav,Punjab,22:00,379.18
+Rahul Mehta,Delhi,15:37,405.41
+Ritika Singh,Kerala,16:43,562.73
+Ritika Kulkarni,West Bengal,23:30,929.36
+Rahul Mehta,Tamil Nadu,20:53,383.49
+Karan Joshi,Rajasthan,16:33,682.87
+Diya Joshi,Kerala,22:28,585.79
+Ishita Patel,Rajasthan,23:01,498.56
+Ishita Roy,Maharashtra,18:47,323.24
+Ananya Das,Karnataka,16:27,368.29
+Kabir Singh,Tamil Nadu,17:42,335.84
+Arjun Iyer,Gujarat,18:28,80.0
+Ritika Iyer,Tamil Nadu,21:17,423.5
+Aditya Gupta,Maharashtra,20:23,207.37
+Ishita Singh,Kerala,22:31,596.1
+Aisha Roy,Punjab,15:37,278.39
+Rahul Joshi,Punjab,21:52,214.1
+Neha Reddy,Uttar Pradesh,15:20,275.73
+Rahul Singh,Rajasthan,21:09,536.67
+Aisha Iyer,Tamil Nadu,15:27,285.94
+Rohan Nair,Madhya Pradesh,12:59,326.05
+Rohan Das,Karnataka,17:20,426.44
+Kabir Gupta,Gujarat,23:31,88.41
+Karan Singh,Tamil Nadu,22:31,371.87
+Arjun Roy,Kerala,14:31,594.21
+Rohan Patel,Uttar Pradesh,23:18,478.69
+Vivaan Mehta,Delhi,17:29,394.42
+Ritika Kulkarni,Kerala,17:07,392.88
+Sneha Yadav,West Bengal,20:52,265.83
+Vivaan Yadav,Bihar,17:27,465.52
+Rahul Kulkarni,Madhya Pradesh,19:02,268.68
+Kabir Mehta,Punjab,19:55,361.51
+Rahul Yadav,Delhi,20:44,705.14
+Pooja Mishra,Bihar,16:39,298.45
+Karan Yadav,Delhi,21:36,119.91
+Pooja Das,Rajasthan,17:45,357.51
+Neha Mehta,Uttar Pradesh,18:57,773.55
+Rahul Verma,Tamil Nadu,23:55,144.98
+Karan Kulkarni,Karnataka,19:53,703.77
+Ananya Yadav,Madhya Pradesh,17:40,482.23
+Sneha Roy,Tamil Nadu,18:50,470.38
+Aditya Iyer,West Bengal,18:56,142.72
+Pooja Nair,Kerala,18:49,431.2
+Aditya Kulkarni,Kerala,15:54,211.45
+Aditya Yadav,West Bengal,12:52,703.22
+Priya Nair,Rajasthan,17:35,551.87
+Ritika Verma,Uttar Pradesh,22:57,166.26
+Vivaan Sharma,Maharashtra,14:01,175.9
+Rahul Reddy,Karnataka,18:27,422.39
+Priya Kulkarni,Karnataka,20:55,317.05
+Sneha Patel,Madhya Pradesh,18:42,477.39
+Rohan Sharma,Tamil Nadu,15:48,214.42
+Ananya Iyer,Madhya Pradesh,20:13,463.65
+Diya Patel,Karnataka,15:28,299.01
+Aarav Sharma,Bihar,18:55,495.93
+Arjun Kulkarni,Karnataka,16:05,438.13
+Rahul Patel,Punjab,17:24,532.24
+Karan Roy,Madhya Pradesh,21:00,593.05
+Sanjay Roy,Karnataka,14:40,525.92
+Karan Reddy,Tamil Nadu,16:13,290.36
+Aditya Reddy,Maharashtra,19:46,491.11
+Meera Joshi,Tamil Nadu,18:17,510.79
+Aditya Singh,West Bengal,15:18,249.45
+Aarav Mishra,Madhya Pradesh,20:38,334.13
+Aisha Singh,Bihar,15:50,583.18
+Ananya Nair,Tamil Nadu,21:38,557.8
+Aditya Das,Gujarat,23:08,385.46
+Meera Mishra,Uttar Pradesh,15:11,527.95
+Diya Yadav,Maharashtra,20:16,427.05
+Priya Sharma,Gujarat,21:18,362.54
+Aisha Yadav,Tamil Nadu,16:40,504.36
+Vikram Das,Uttar Pradesh,19:05,481.58
+Aisha Reddy,Delhi,20:20,403.19
+Meera Gupta,Madhya Pradesh,19:41,160.13
+Aditya Mehta,Bihar,12:15,590.63
+Vivaan Singh,Maharashtra,20:39,379.24
+Sanjay Sharma,Rajasthan,16:11,192.12
+Rahul Sharma,Bihar,19:31,440.65
+Pooja Das,West Bengal,19:10,138.64
+Pooja Verma,Bihar,19:56,280.29
+Rahul Yadav,Gujarat,17:33,584.1
+Aditya Mehta,Bihar,23:31,380.51
+Kabir Das,Punjab,23:10,541.69
+Pooja Verma,Rajasthan,19:43,80.0
+Rahul Singh,Bihar,18:55,417.01
+Aarav Singh,Gujarat,16:09,451.22
+Rohan Reddy,Gujarat,12:47,290.0
+Arjun Singh,Punjab,19:20,820.47
+Sneha Mishra,Maharashtra,17:43,380.56
+Vivaan Verma,Delhi,21:25,80.0
+Aditya Reddy,Kerala,22:19,188.64
+Ishita Patel,West Bengal,16:18,466.36
+Ritika Yadav,Rajasthan,18:23,286.11
+Ritika Nair,Delhi,18:50,194.99
+Ananya Verma,Gujarat,19:34,403.68
+Pooja Roy,Bihar,23:00,111.76
+Meera Mishra,Bihar,18:33,336.53
+Ananya Iyer,Kerala,23:09,303.44
+Sneha Patel,Gujarat,23:33,237.7
+Arjun Kulkarni,Punjab,14:37,497.11
+Rahul Das,Karnataka,17:37,283.14
+Ritika Sharma,Tamil Nadu,18:18,338.78
+Sneha Mishra,Punjab,21:53,339.4
+Ishita Joshi,Kerala,18:12,490.25
+Karan Yadav,Uttar Pradesh,20:28,473.8
+Kabir Joshi,Tamil Nadu,21:49,536.63
+Priya Nair,Rajasthan,13:05,500.39
+Rohan Yadav,Madhya Pradesh,17:38,684.99
+Vivaan Singh,Punjab,21:22,647.73
+Meera Das,Gujarat,17:11,294.64
+Aarav Iyer,Kerala,15:06,341.65
+Kabir Patel,Karnataka,19:49,464.39
+Ananya Verma,Delhi,20:40,264.58
+Aditya Gupta,Uttar Pradesh,18:01,748.98
+Aditya Singh,Madhya Pradesh,17:57,452.89
+Ishita Patel,Gujarat,19:59,399.41
+Ritika Iyer,Bihar,18:43,446.99
+Arjun Verma,Punjab,19:17,533.04
+Kabir Reddy,Karnataka,23:15,474.02
+Neha Nair,Tamil Nadu,21:05,281.92
+Sneha Iyer,Karnataka,15:51,545.49
+Aisha Singh,Madhya Pradesh,22:01,411.63
+Meera Yadav,Bihar,16:31,594.74
+Pooja Reddy,Uttar Pradesh,16:11,417.32
+Aarav Joshi,Uttar Pradesh,20:49,795.55
+Sneha Sharma,Kerala,13:14,363.52
+Rohan Patel,Delhi,17:52,301.86
+Vivaan Yadav,Delhi,11:24,185.3
+Pooja Reddy,Karnataka,20:51,635.66
+Pooja Reddy,Uttar Pradesh,23:36,469.28
+Ritika Verma,Uttar Pradesh,23:51,310.77
+Diya Das,Rajasthan,19:03,464.7
+Ananya Gupta,Delhi,22:21,445.63
+Sanjay Singh,Karnataka,17:51,514.71
+Ishita Sharma,Gujarat,21:09,645.05
+Rahul Mishra,West Bengal,23:23,80.0
+Meera Gupta,Maharashtra,17:10,555.95
+Arjun Yadav,Madhya Pradesh,23:11,356.26
+Vikram Kulkarni,Uttar Pradesh,19:37,295.5
+Rohan Iyer,Rajasthan,18:11,270.4
+Aarav Kulkarni,Uttar Pradesh,11:36,784.24
+Vivaan Verma,Uttar Pradesh,16:39,717.81
+Ananya Roy,Uttar Pradesh,21:21,548.25
+Aditya Singh,Punjab,20:56,407.94
+Aditya Mishra,Bihar,16:21,164.98
+Kabir Sharma,Rajasthan,20:22,687.86
+Sneha Yadav,Maharashtra,18:28,364.43
+Arjun Verma,Tamil Nadu,16:34,427.63
+Meera Patel,Kerala,19:48,190.5
+Ananya Verma,Kerala,23:18,575.48
+Aarav Joshi,Rajasthan,20:10,398.86
+Meera Verma,Bihar,23:05,614.92
+Ishita Gupta,Uttar Pradesh,22:27,245.27
+Rohan Gupta,Tamil Nadu,19:13,489.4
+Priya Iyer,Bihar,12:34,283.17
+Sneha Roy,Rajasthan,18:25,497.27
+Ritika Das,Kerala,20:27,560.0
+Aditya Mehta,Madhya Pradesh,16:06,274.29
+Aarav Singh,Karnataka,13:30,80.0
+Rahul Mehta,Tamil Nadu,12:16,489.36
+Aditya Roy,West Bengal,16:24,532.55
+Pooja Verma,Kerala,22:16,473.61
+Ananya Mishra,Rajasthan,17:44,379.53
+Rahul Patel,Madhya Pradesh,16:48,606.86
+Ritika Singh,West Bengal,21:33,486.59
+Arjun Das,Madhya Pradesh,21:56,268.38
+Ananya Nair,Rajasthan,23:45,604.98
+Vivaan Das,Uttar Pradesh,23:43,230.79
+Sanjay Verma,Maharashtra,22:10,358.39
+Priya Yadav,Delhi,21:43,554.55
+Arjun Singh,Madhya Pradesh,21:20,613.89
+Aditya Patel,Tamil Nadu,15:54,340.89
+Sneha Das,Kerala,19:44,405.88
+Sanjay Gupta,West Bengal,19:09,333.79
+Karan Gupta,Uttar Pradesh,12:06,188.79
+Rahul Gupta,Maharashtra,20:56,80.0
+Pooja Reddy,Tamil Nadu,18:36,681.49
+Sanjay Nair,Gujarat,20:39,581.41
+Sanjay Roy,Bihar,16:56,524.62
+Ishita Kulkarni,Delhi,22:17,482.3
+Pooja Sharma,Punjab,20:17,280.55
+Diya Mishra,Bihar,15:14,80.0
+Karan Mehta,Bihar,13:17,537.74
+Arjun Gupta,Madhya Pradesh,21:58,523.4
+Arjun Kulkarni,Kerala,19:52,80.0
+Vivaan Das,Karnataka,23:25,533.42
+Karan Yadav,West Bengal,19:12,390.0
+Priya Mishra,Gujarat,19:58,618.76
+Pooja Kulkarni,Delhi,18:32,751.45
+Meera Roy,Maharashtra,18:31,298.36
+Sanjay Nair,Karnataka,22:35,369.86
+Pooja Joshi,Karnataka,20:53,301.33
+Aditya Mehta,Gujarat,17:36,490.19
+Priya Mishra,Delhi,16:17,203.51
+Arjun Das,Gujarat,23:43,80.0
+Aarav Nair,Karnataka,16:00,224.95
+Ananya Mehta,Uttar Pradesh,19:45,275.43
+Sneha Iyer,Tamil Nadu,20:13,259.76
+Kabir Mehta,Madhya Pradesh,14:37,387.46
+Rahul Sharma,West Bengal,23:53,418.32
+Pooja Das,Madhya Pradesh,16:43,338.47
+Rahul Nair,Maharashtra,17:20,544.05
+Sneha Mehta,Madhya Pradesh,17:19,80.0
+Priya Verma,West Bengal,19:51,80.0
+Sanjay Iyer,Madhya Pradesh,18:01,509.54
+Diya Mehta,Rajasthan,21:47,318.8
+Vivaan Gupta,Bihar,23:21,409.08
+Ananya Roy,West Bengal,16:42,263.77
+Pooja Das,Rajasthan,22:56,135.19
+Vikram Verma,Rajasthan,20:16,474.21
+Vikram Yadav,Karnataka,23:41,293.67
+Aditya Singh,Punjab,20:26,779.48
+Ishita Joshi,Rajasthan,16:07,317.09
+Diya Sharma,Madhya Pradesh,12:04,203.14
+Diya Reddy,Delhi,12:24,418.91
+Aisha Mehta,Tamil Nadu,23:08,537.7
+Priya Joshi,Tamil Nadu,23:29,389.42
+Karan Joshi,Bihar,19:21,486.93
+Rohan Joshi,Madhya Pradesh,22:13,490.39
+Rohan Gupta,Karnataka,13:05,440.01
+Karan Gupta,Tamil Nadu,16:30,283.93
+Meera Sharma,Gujarat,14:00,358.58
+Ishita Yadav,West Bengal,20:40,671.88
+Ananya Singh,Bihar,20:06,311.29
+Meera Das,Uttar Pradesh,18:02,482.08
+Neha Mehta,Kerala,18:21,179.88
+Arjun Reddy,Madhya Pradesh,21:57,415.31
+Diya Joshi,Delhi,22:51,757.45
+Meera Sharma,Delhi,20:13,934.41
+Aarav Gupta,West Bengal,20:41,570.21
+Vivaan Iyer,Madhya Pradesh,18:03,642.52
+Sanjay Sharma,Madhya Pradesh,23:03,635.08
+Rahul Iyer,Kerala,16:30,574.86
+Karan Singh,Bihar,18:26,397.37
+Rahul Roy,West Bengal,18:08,663.62
+Arjun Mishra,Maharashtra,14:18,401.85
+Rahul Yadav,Maharashtra,14:49,423.5
+Sneha Mishra,West Bengal,21:26,391.52
+Neha Verma,Gujarat,12:44,302.24
+Diya Joshi,Delhi,23:58,424.62
+Rahul Mishra,Uttar Pradesh,18:05,330.66
+Aisha Patel,Bihar,17:41,80.0
+Ananya Nair,Rajasthan,18:52,477.47
+Rohan Mishra,Gujarat,20:43,283.8
+Ishita Iyer,Bihar,23:56,653.87
+Vivaan Sharma,Karnataka,18:22,325.85
+Kabir Gupta,Rajasthan,19:52,365.02
+Ishita Verma,Maharashtra,12:17,689.09
+Meera Kulkarni,Kerala,20:51,172.28
+Rohan Patel,Karnataka,18:54,360.97
+Rohan Patel,Tamil Nadu,21:36,310.61
+Kabir Verma,Uttar Pradesh,16:01,536.32
+Karan Nair,Kerala,21:02,540.72
+Aditya Mehta,Madhya Pradesh,17:43,678.5
+Aisha Yadav,Bihar,15:42,312.42
+Ishita Das,West Bengal,17:27,188.77
+Ananya Nair,Punjab,16:09,199.18
+Vikram Reddy,Uttar Pradesh,23:10,506.9
+Aisha Mishra,Kerala,22:04,128.69
+Diya Joshi,Delhi,17:32,546.96
+Ananya Das,Madhya Pradesh,15:05,649.19
+Kabir Nair,Uttar Pradesh,13:28,533.65
+Ishita Patel,Kerala,18:25,385.93
+Arjun Sharma,West Bengal,13:50,317.81
+Sanjay Gupta,Madhya Pradesh,17:13,621.99
+Kabir Joshi,Punjab,21:54,124.91
+Kabir Joshi,West Bengal,19:45,177.8
+Pooja Kulkarni,Kerala,22:14,619.5
+Aarav Joshi,Punjab,22:18,80.0
+Vikram Das,Punjab,18:10,367.37
+Diya Verma,Bihar,18:16,235.53
+Sanjay Singh,Delhi,23:13,662.15
+Kabir Mishra,Delhi,18:26,335.91
+Vivaan Reddy,Madhya Pradesh,21:49,215.36
+Kabir Nair,Madhya Pradesh,15:31,306.53
+Aarav Das,Bihar,23:53,546.57
+Ritika Nair,West Bengal,20:44,80.0
+Ritika Verma,Bihar,19:42,342.81
+Sanjay Gupta,Punjab,16:38,415.42
+Ananya Mehta,Tamil Nadu,23:28,311.65
+Karan Verma,Tamil Nadu,13:32,194.52
+Neha Mishra,Bihar,16:47,373.77
+Vikram Roy,Delhi,20:18,659.93
+Pooja Reddy,Madhya Pradesh,22:11,629.8
+Aisha Das,Bihar,15:48,205.25
+Pooja Das,Kerala,12:45,206.02
+Arjun Roy,Bihar,21:56,282.44
+Arjun Yadav,Gujarat,18:09,414.2
+Vivaan Roy,Gujarat,20:10,705.07
+Neha Roy,Rajasthan,19:50,471.25
+Neha Singh,West Bengal,23:06,486.56
+Sanjay Mishra,Madhya Pradesh,18:47,80.0
+Vikram Iyer,Delhi,13:44,397.96
+Neha Kulkarni,Madhya Pradesh,21:26,471.34
+Ishita Das,Gujarat,21:39,431.14
+Kabir Mishra,Delhi,22:41,271.59
+Pooja Yadav,Uttar Pradesh,15:49,349.32
+Priya Mehta,Kerala,21:11,664.85
+Rohan Kulkarni,West Bengal,19:17,455.34
+Vikram Mehta,Karnataka,22:00,715.07
+Ishita Nair,Bihar,19:59,400.33
+Ishita Gupta,Gujarat,19:53,170.55
+Neha Nair,Uttar Pradesh,17:45,398.29
+Ishita Das,Delhi,22:50,361.73
+Aisha Verma,Tamil Nadu,16:22,371.08
+Ananya Reddy,Delhi,17:18,281.93
+Priya Yadav,Uttar Pradesh,09:52,304.32
+Aarav Patel,Madhya Pradesh,17:41,529.91
+Sanjay Reddy,Uttar Pradesh,19:56,471.31
+Ishita Iyer,Maharashtra,16:18,567.47
+Aarav Reddy,West Bengal,20:51,263.1
+Aisha Nair,Kerala,23:12,524.7
+Ishita Das,Maharashtra,20:49,385.17
+Vikram Das,Gujarat,17:40,331.37
+Priya Mishra,Madhya Pradesh,17:34,458.66
+Arjun Roy,Maharashtra,18:29,316.01
+Ishita Sharma,Maharashtra,20:16,470.06
+Vikram Patel,Uttar Pradesh,21:26,80.0
+Meera Nair,Madhya Pradesh,16:24,508.7
+Rahul Das,Gujarat,16:48,226.08
+Ritika Sharma,Bihar,20:32,281.89
+Rahul Mehta,Madhya Pradesh,18:48,492.62
+Kabir Iyer,Tamil Nadu,19:10,379.51
+Vikram Singh,Karnataka,18:54,98.74
+Vikram Mehta,Madhya Pradesh,21:58,632.94
+Pooja Sharma,West Bengal,20:02,349.62
+Aarav Gupta,Uttar Pradesh,16:05,559.97
+Neha Singh,Bihar,18:13,130.8
+Arjun Reddy,Madhya Pradesh,19:11,339.81
+Ananya Gupta,Rajasthan,19:51,526.98
+Ritika Mishra,Gujarat,23:35,84.15
+Kabir Roy,West Bengal,23:16,539.17
+Rahul Singh,Bihar,12:22,205.19
+Karan Roy,Madhya Pradesh,19:04,566.79
+Priya Joshi,Kerala,15:19,496.03
+Ritika Verma,Uttar Pradesh,14:27,286.69
+Rohan Sharma,Punjab,19:47,547.35
+Arjun Mehta,Punjab,22:56,638.57
+Diya Nair,Kerala,17:35,539.19
+Rahul Verma,Madhya Pradesh,14:54,205.36
+Karan Reddy,West Bengal,20:40,696.32
+Aditya Kulkarni,Maharashtra,23:40,200.26
+Aarav Mishra,Uttar Pradesh,14:13,273.37
+Vivaan Das,Rajasthan,08:30,242.7
+Karan Joshi,Tamil Nadu,19:46,725.24
+Neha Verma,Kerala,17:23,419.45
+Aisha Sharma,Madhya Pradesh,19:39,882.99
+Rohan Yadav,West Bengal,20:36,501.84
+Ritika Roy,Karnataka,18:22,213.9
+Vivaan Singh,Kerala,19:14,560.12
+Vivaan Roy,Delhi,13:24,384.26
+Diya Reddy,Kerala,19:41,385.2
+Ishita Patel,Bihar,23:17,369.76
+Sneha Gupta,West Bengal,16:24,345.33
+Pooja Gupta,Madhya Pradesh,19:16,376.76
+Meera Reddy,Delhi,16:55,402.75
+Pooja Nair,Kerala,19:56,406.52
+Karan Nair,Karnataka,19:17,634.69
+Priya Verma,Karnataka,21:52,624.1
+Rahul Roy,Delhi,16:07,502.37
+Diya Roy,Kerala,15:41,451.63
+Arjun Sharma,Delhi,22:10,482.92
+Karan Roy,West Bengal,22:03,477.18
+Rohan Mehta,Karnataka,15:36,400.84
+Aarav Reddy,Bihar,18:05,89.14
+Priya Nair,Uttar Pradesh,23:10,403.58
+Ananya Mishra,Tamil Nadu,14:52,230.39
+Rohan Gupta,Madhya Pradesh,17:43,412.6
+Ishita Reddy,Kerala,18:24,381.25
+Meera Verma,Maharashtra,22:58,442.74
+Aisha Roy,Tamil Nadu,20:11,202.32
+Diya Reddy,Uttar Pradesh,14:34,203.43
+Aisha Yadav,Maharashtra,22:57,566.0
+Sanjay Das,Gujarat,23:41,232.54
+Arjun Das,Tamil Nadu,18:33,459.02
+Arjun Singh,Kerala,19:37,249.05
+Ritika Patel,Tamil Nadu,21:14,572.81
+Aditya Mehta,Uttar Pradesh,21:12,290.99
+Aarav Kulkarni,Bihar,19:07,190.78
+Aisha Sharma,Tamil Nadu,16:20,193.29
+Arjun Joshi,Maharashtra,21:16,635.98
+Sneha Mishra,West Bengal,16:17,499.35
+Meera Yadav,Delhi,14:30,583.37
+Rohan Joshi,West Bengal,16:19,373.42
+Ritika Joshi,Bihar,17:55,478.6
+Rahul Kulkarni,Delhi,14:10,511.89
+Rahul Singh,West Bengal,16:35,515.71
+Sanjay Kulkarni,Madhya Pradesh,18:40,317.34
+Aarav Yadav,Maharashtra,20:38,237.83
+Arjun Patel,Maharashtra,18:38,592.69
+Vivaan Kulkarni,Tamil Nadu,21:41,343.16
+Aisha Mehta,Bihar,20:49,405.93
+Rohan Roy,Kerala,17:42,465.2
+Aisha Mehta,Delhi,22:33,471.04
+Ananya Gupta,Karnataka,17:41,269.02
+Aarav Verma,Maharashtra,23:22,413.74
+Meera Iyer,Uttar Pradesh,19:45,450.15
+Aditya Reddy,Maharashtra,14:35,331.18
+Ritika Joshi,Punjab,21:38,386.89
+Priya Nair,Tamil Nadu,16:26,356.5
+Aisha Patel,West Bengal,21:07,486.02
+Aisha Mehta,West Bengal,20:44,202.85
+Kabir Iyer,Uttar Pradesh,16:21,433.8
+Kabir Roy,Kerala,23:30,203.14
+Rahul Mehta,Maharashtra,15:14,633.33
+Ananya Yadav,Punjab,16:34,507.85
+Aarav Kulkarni,Rajasthan,19:43,499.53
+Ishita Patel,West Bengal,22:22,334.43
+Priya Reddy,Uttar Pradesh,18:43,853.32
+Priya Nair,Bihar,20:55,698.97
+Sneha Singh,Delhi,19:39,550.47
+Pooja Verma,Maharashtra,19:42,469.78
+Diya Gupta,Gujarat,19:02,196.12
+Diya Joshi,Uttar Pradesh,16:56,772.67
+Ritika Mishra,Rajasthan,10:58,449.98
+Aisha Mehta,Tamil Nadu,19:03,652.39
+Aisha Yadav,Tamil Nadu,15:32,450.49
+Pooja Iyer,Madhya Pradesh,19:07,223.65
+Aisha Nair,Punjab,18:13,394.24
+Meera Gupta,Maharashtra,17:16,640.62
+Rohan Das,Rajasthan,19:39,622.57
+Ishita Joshi,Karnataka,16:44,420.96
+Pooja Joshi,Tamil Nadu,18:08,531.4
+Ritika Roy,Delhi,20:51,155.53
+Ananya Das,Tamil Nadu,20:51,326.64
+Karan Nair,Gujarat,20:57,609.69
+Aisha Das,Bihar,17:16,610.38
+Vikram Mishra,Uttar Pradesh,20:10,444.27
+Vivaan Singh,Rajasthan,14:28,457.27
+Ishita Mehta,Punjab,16:51,596.82
+Sneha Joshi,Gujarat,16:43,508.13
+Sanjay Singh,Uttar Pradesh,15:11,300.43
+Neha Joshi,Punjab,17:47,235.65
+Kabir Reddy,Maharashtra,17:40,520.52
+Karan Mishra,Karnataka,14:26,100.41
+Sanjay Gupta,Tamil Nadu,19:10,363.69
+Ishita Singh,Punjab,17:17,556.39
+Sanjay Roy,Tamil Nadu,18:55,613.56
+Pooja Kulkarni,Uttar Pradesh,15:10,394.17
+Rohan Mishra,Gujarat,20:16,513.1
+Aditya Singh,Karnataka,17:59,468.62
+Diya Das,Gujarat,21:48,449.86
+Aditya Patel,Rajasthan,18:59,368.94
+Meera Mehta,Delhi,19:40,567.17
+Karan Verma,West Bengal,19:42,383.19
+Pooja Mishra,Punjab,21:55,267.85
+Vikram Reddy,Rajasthan,17:44,390.87
+Vikram Verma,Uttar Pradesh,15:40,273.73
+Ritika Iyer,West Bengal,16:58,248.85
+Pooja Nair,West Bengal,19:19,497.17
+Pooja Iyer,Rajasthan,19:33,441.75
+Karan Joshi,Rajasthan,18:59,424.47
+Diya Yadav,Kerala,17:51,711.95
+Neha Gupta,Delhi,20:12,202.82
+Arjun Reddy,West Bengal,16:45,472.55
+Meera Mishra,Tamil Nadu,19:40,491.88
+Ananya Das,Uttar Pradesh,20:18,164.24
+Vikram Yadav,Rajasthan,13:11,603.56
+Karan Mehta,Maharashtra,16:17,230.8
+Sanjay Nair,Delhi,18:34,513.4
+Aarav Verma,Maharashtra,18:28,511.15
+Aarav Singh,Maharashtra,21:21,590.4
+Arjun Mehta,Kerala,22:50,417.43
+Vivaan Joshi,Maharashtra,23:03,80.0
+Sneha Yadav,Tamil Nadu,22:12,507.97
+Sneha Mishra,Tamil Nadu,19:49,339.07
+Ananya Iyer,Kerala,19:12,1000.92
+Kabir Kulkarni,Maharashtra,10:30,352.38
+Meera Roy,Rajasthan,20:46,378.73
+Vivaan Kulkarni,West Bengal,16:40,401.96
+Neha Singh,Punjab,23:13,186.67
+Rahul Singh,Madhya Pradesh,18:50,432.61
+Sneha Gupta,Maharashtra,17:02,501.8
+Ritika Yadav,Bihar,15:23,457.51
+Aditya Singh,Karnataka,14:21,420.14
+Vivaan Sharma,Punjab,16:50,199.35
+Rahul Verma,Kerala,19:50,926.07
+Pooja Yadav,Kerala,18:24,382.81
+Pooja Kulkarni,Karnataka,18:45,471.1
+Kabir Das,Rajasthan,15:36,364.58
+Rohan Das,Punjab,17:55,601.05
+Sanjay Reddy,West Bengal,20:28,607.31
+Neha Mishra,Rajasthan,25:75,533.28
+Kabir Sharma,Madhya Pradesh,99:99,504.77
+Rohan Reddy,Gujarat,-01:30,595.79
+Pooja Yadav,Uttar Pradesh,48:00,291.03
+Aditya Roy,West Bengal,77:15,755.24
