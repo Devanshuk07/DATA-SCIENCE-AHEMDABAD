@@ -1,0 +1,11 @@
+season,match_id,team,opponent,player,runs,wickets,fours,catches,Role
+2024,1,CSK,RCB,Ruturaj Gaikwad,67,5,5,0,batsman
+2024,1,CSK,RCB,Virat Kohli,21,0,2,1,batsman
+2024,2,MI,GT,Rohit Sharma,43,1,,0,batsman
+2024,2,,GT,Shubman Gill,,0,4,1,batsman
+2024,3,KKR,SRH,Sunil Narine,52,1,3,,bowler
+2024,3,KKR,SRH,Pat Cummins,8,,2,1,bowler
+2024,4,,DC,Sanju Samson,46,0,6,0,batsman
+2024,4,RR,DC,Rishabh Pant,,1,3,0,wicket keeper
+2024,5,LSG,PBKS,KL Rahul,39,0,,0,wicket keeper
+2024,5,,PBKS,Arshdeep Singh,3,2,1,,bowler
