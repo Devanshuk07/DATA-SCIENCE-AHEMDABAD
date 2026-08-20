@@ -1,0 +1,15 @@
+1. ml- machine learning
+2. dl- deep learning
+
+this both is used to develop your own AI model like chatGPT.
+
+3.ml oops - when you create a AI model then this is used to connect to server.
+
+4.computer vision - for image recognition .
+5.nlp - to convert Prompt That is understandable by AI-model.
+6.gen AI
+7.llm 
+8.transformer
+9.rag
+10.agentic AI - AI engineer automation - to convert full system to AI
+11.mcp server
