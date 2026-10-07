@@ -11,23 +11,30 @@ BUT IF WE DON'T WANT BY DEFAULT YOU CAN TAKE IT AS ORDER BY.
 WHERE TO USE ORDER BY:-
 👉 Ask:
 
-“Do I need to arrange/sort the final output?”
+“Do I need to arrange/sort the RESULT?”
 
 ✔ YES → use ORDER BY
 
 RULES:-ORDER BY always comes LAST
 
 USING ORDER BY WITH GROUP BY:--
-QUERY:-SELECT department, COUNT(*) AS total
+QUERY:-SELECT city-->COLUMNNAME, COUNT(*) AS total_employee
 FROM employee
-GROUP BY department    // HR HAS -3 EMP LIKE THAT.
-ORDER BY total DESC;  //ORDER BY MEANS DESCENDING ORDER.
+GROUP BY city
+ORDER BY total_employee DESC;  //ORDER BY MEANS DESCENDING ORDER.BY DEFAULT IT IS ASC
 ----------------------------------------
 QUERY:-(ORDER BY)
 ---------------------------------------
 SELECT * FROM employee
 ORDER BY department ASC, salary DESC;  //MULTI COLOUMN.
 
+QUERY:-(DESC ORDER)
+SELECT * FROM products
+ORDER BY price DESC
+
+QUERY:-(ASC ORDER)
+SELECT * FROM employee
+ORDER BY hire_date ASC
 -----------------------------------------
 GROUP BY:-
 -----------------------------------------
@@ -39,8 +46,15 @@ DEFINATION:-GROUP BY in MySQL is used to group rows that have the same values in
 EX:-COLUMN WE WANT GROUP BY DEPARMENT.
 WILL WORK ONLY ON THAT DEPARTMENT(1 COLUMN).
 
-WHERE WORKS ON PERTICULAR TABLE/ SELECT FROM table-name WHERE EMP=1
-HAVING WORKS ON PERTICULAR COLUMN ON WHICH YOU HAVE MADE GROUP BY.
+WHERE WORKS ON PERTICULAR TABLE/ROWS SELECT FROM table-name WHERE EMP=1
+HAVING WORKS ON PERTICULAR GROUP ON WHICH YOU HAVE MADE GROUP BY.
+
+EXAMPLE:-
+SELECT department, COUNT(*) AS total_employee
+FROM employee
+WHERE salary > 30000
+GROUP BY department
+HAVING COUNT(*) >= 2;
 
 RULE:-
 Use WHERE, not GROUP BY, for filtering....
@@ -56,6 +70,7 @@ You want:
 Number of students per (section choose) ✅ → GROUP BY
 Only students with marks > 50 ✅ → WHERE
 Sections with more than 10 students ✅ → HAVING
+HAVING is used to filter groups created by GROUP BY.
 
 GROUP BY IS USED BY:-
 These are used with GROUP BY:
@@ -65,20 +80,37 @@ AVG() → average
 SUM() → total
 MIN() → smallest value
 MAX() → largest value
+
+
+QUERY:-(AVG SALARY OF EMP)
+SELECT AVG(salary) FROM employee
+
+QUERY:-(COUNT TOTAL NUMBER OF PUPIL)
+SELECT COUNT(*) AS total_pup   //*-COUNTS THE ALL ROWS EVEN NULL VALUES
+FROM pupil
+
+SELECT COUNT(pupil_id) AS total_pup  //PUPIL_ID-COUNTS NO NULL VALUES.ONLY PUPIL_ID ROW IS COUNT AND NO OTHER ROWS.
+FROM pupil
+
+QUERY:-(MAX PRICE)
+SELECT MAX(price) FROM products
+
+QUERY:-(MIN SALARY)
+SELECT MIN(salary) FROM employee.
 -------------------------------------
 QUERY:-(GROUP BY)
 -------------------------------------
-QUERY:-SELECT department, SUM(salary) AS total_salary
+QUERY:-(Show only departments where the average salary is greater than 40,000.)
+SELECT department, SUM(salary) AS total_salary
 FROM employee
 GROUP BY department
 
 HAVING--> FILTERS GROUP RESULT.
--Sections with more than 10 students ✅ → HAVING
 
-QUERY:-SELECT department, COUNT(*) AS total_count
+QUERY:-SELECT department, AVG(salary) AS avg_salary
 FROM employee
 GROUP BY department
-HAVING COUNT(*)>2
+HAVING AVG(salary) > 40000;
 
 QUERY:-SELECT department, AVG(salary) AS total_salary
 FROM employee
@@ -87,30 +119,15 @@ GROUP BY department
 -----------------------------------------
 HOW TO DECEIDE WHAT TO USE:-
 -----------------------------------------
-👉 Look for words like:
+| Requirement                                        | Use        |
+| -------------------------------------------------- | ---------- |
+| **Only specific rows**                             | `WHERE`    |
+| **Greater than / less than / equal to for rows**   | `WHERE`    |
+| **Before grouping condition**                      | `WHERE`    |
+| **Greater than / less than / equal to for groups** | `HAVING`   |
+| **Sort greater → smaller / smaller → greater**     | `ORDER BY` |
+| **Make groups**                                    | `GROUP BY` |
 
-“only”
-“greater than”
-“less than”
-“equal to”
-“before grouping condition”
-
-👉 ✔ Use WHERE condition works on full table.
------------------------------------------
-Look for words like:
-
-“each”
-“per”
-“by department”
-“by category”
-
-👉 ✔ Use GROUP BY
------------------------------------------
-👉 Look for:
-
-COUNT, AVG, SUM, MIN, MAX has condition on them
-
-👉 ✔ Use HAVING only works on group created.
 -----------------------------------------
 
 DISTINCT:- FOR UNIQUENESS.

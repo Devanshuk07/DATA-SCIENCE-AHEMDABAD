@@ -20,75 +20,45 @@ SID  SNAME  SMOBILE  SCOURSE  CITY        COURSEID
 
 WHEN WE START FETCH IN FUTURE IT WILL GIVE 2 VALUES WHEN WE ENTER FILTER FOR ONLY RAJKOT STUDENTS.
 
-2) PARTIAL DEPENDENCY:-- FIRST NORMALIZATION MUST BE IMPLEMENTED. PARTIAL DEPENDENCY MUST BE REMOVED (ONE COLUMN DEPENDS ON EVERY OTHER COLUMN IN SAME TABLE).
-NOTE:-STUDENT DEPEND ON STUDENT_ID AND ON OTHER TABLE COURSE DEPEND ON COURSE_ID.ALWAYS CREATE A DIFFERENT TABLE FOR COURSE AND STUDENT.
+2) PARTIAL DEPENDENCY:-- FIRST NORMALIZATION MUST BE IMPLEMENTED. PARTIAL DEPENDENCY MUST BE REMOVED .
+Student_ID and Course_ID can be in the same table, and together they can form a composite primary key.
+| Student_ID | Course_ID | Student_Name | Course_Name |
+| ---------: | --------: | ------------ | ----------- |
+|          1 |       101 | Rahul        | Python      |
+|          1 |       102 | Rahul        | SQL         |
+|          2 |       101 | Amit         | Python      |
+PRIMARY KEY (Student_ID, Course_ID)
 
-EX:- 1 TABLE FOR QUESTION , 2-TABLE FOR ANSWER, 3-TABLE FOR RESULT. (LIKE THIS WE HAVE TO CREATE TABLE) (MULTI TABLE FOR MULTI VALUE IF YOU HAVE).
 
-STUDENT DATA AND COURSE DATA STORE.
+Student_ID + Course_ID → composite primary key(BOTH TOGETHER)
+Student_ID → Student_Name DEPENDS ON STUDENT_ID THAT IS PARTIAL DEPENDENCY...
 
-IF WE DO IN ONE TABLE - SQL WILL ALLOW BUT IF WE STORE LIKE THIS IT WILL BE PARTIAL DEPENDENCY.
-
-COURSE DEPEND TO-COURSE ID.
-
-STUDENT DEPEND ON SID.
-
-TWO PRIMARY KEY (SID,CID) SHOULDN'T BE GIVEN IN ONE TABLE. SECOND PRIMARY KEY IS CALLED COMPOSITE PRIMARY KEY.
-
-IF WE WANT TOO THEN MERGE (FOREIGN KEY) IN 3RD TABLE.
 
 3) 1ST AND 2ND RULE MUST BE IMPLEMENTED:-
 
-TRANSITIVE DEPENDENCY - AS BEFORE COURSEID DEPEND ON COURSE AND STUDENTID DEPEND ON SID THEN IN THIS COURSE DEPEND ON COURSEID AND COURSEID IS DEPEND ON SID (MULTI DEPENDENCY NOT ALLOWED).
+TRANSITIVE DEPENDENCY - A non-key column depends on another non-key column, instead of directly depending on the primary key.
+| Student_ID (PK) | Student_Name | Dept_ID | Dept_Name |
+| --------------- | ------------ | ------- | --------- |
+| 1               | Rahul        | 10      | IT        |
+| 2               | Amit         | 20      | HR        |
 
-NOTE:-USE OF FOREIGN KEY IN ENROLLMENT TABLE.
-
-COURSE_NAME --> DEPENDS --> COURSE_ID --> DEPENDS --> STUDENT_ID(PRIMERY_KEY).(MULTI DEPENDENCY NOT ALLOWED).THEN INDIRECTLY COURSE_NAME IS DEPEND ON STUDENT_ID(THIS IS TRANSITIVE DEP).
--A transitive dependency occurs when a non-key attribute depends on another non-key attribute instead of directly depending on the primary key.
+Student_ID → Dept_ID DEPEND ON STUDENT_ID
+Dept_ID → Dept_Name DEPEND ON DEPT_ID  THEN THIS IS TRANSITIVE DEPENDENCY..
 
 4) BCNF -- BOYCE CODD NORMALIZATION FACTOR.
 
 BCNF RULE SAYS:
 
 -If one column determines another column,
-👉 then that column must be powerful enough (a key).
+👉 then that column must be powerful enough (a PRIMARY key).
 
 - The left side (determinant) must be a candidate key.
 
-- REAL TIME PROBLEM SOLVE.
 
 
-EXAMPLE (NOT FOLLOWING BCNF):
+SIMPLE RULE:-"Only PRIMARY keys(SUPER KEY) should control other columns".
 
-STUDENT  COURSE    TEACHER
-
-KD        MATH     SHARMA
-
-MIT     SCIENCE    RIYAA
-
-student, course → teacher ✅ teacher → course(WRONG)(teacher is NOT a super key ❌Still it is determining course ❌)THIS VIOLATES BCNF RULES.
-
-NON-KEY COLUMN DETERMINING ANOTHER COLUMN. SO THE TABLE BREAKS BCNF RULE.
-
-NOW FOLLOWING BCNF:
-
-STUDENT   COURSE
-
-KD        MATH
-
-MIT      SCIENCE
-
-
-
-COURSE   TEACHER
-
-MATH      SHARMA
-
-SCIENCE   RIYAA
-
-SIMPLE RULE:-"Only keys should control other columns".
-
-HERE, COURSE IS THE PRIMARY KEY. SO BOTH TABLES ARE NOW IN BCNF.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 BOOKINGID - BOOKMYSHOW (CONSTRAINT PROBLEM (UNIQUENESS))
 

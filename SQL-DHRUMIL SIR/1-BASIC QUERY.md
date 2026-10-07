@@ -150,7 +150,7 @@ INSERT INTO student (name,course,address,pincode,age,coursefees,day,dateofbirth)
 
 
 
-##### SELECT \* FROM customer WHERE name='jay'   (ALWAYS USE ID AFTER WHERE)(AS NAME HAS MANY NAME LIKE JAY SO IT WILL RETURN EVERY QUERY).
+##### SELECT \* FROM customer WHERE name='jay'/id=22   (ALWAYS USE ID AFTER WHERE)(AS NAME HAS MANY NAME LIKE JAY SO IT WILL RETURN EVERY QUERY).
 
 
 
@@ -204,27 +204,35 @@ INSERT INTO student (name,course,address,pincode,age,coursefees,day,dateofbirth)
 
 ### QUERY:-(UPDATE SET)(WHERE)
 
-##### 
+##### example:-TABLE STUDENT
 
-##### UPDATE table-name SET column-name="value" ,column-name="value" WHERE id=3.
+#### | sid | sname | scourse | sfees |
 
+#### | --: | ----- | ------- | ----: |
 
+#### |   1 | Rahul | Python  | 50000 |
 
-##### UPDATE student SET name="rahul\_change" ,address="mumbai\_change" WHERE id=3.
-
-
-
-###### EX:-(TO UPDATE 30% SALARY OF IT DEPARTMENT)
-
-##### UPDATE employee
-
-##### SET salary=salary+(salary\*0.30)
-
-##### WHERE department="IT"
+#### |   2 | Aman  | Java    | 40000 |
 
 
 
+##### UPDATE STUDENT
+
+##### SET SFEES=60000
+
+##### WHERE SID=1;
+
+#### \---------------------------------------------------------------------------------------------
+
+#### TO UPDATE MULTIPLE COLUMNS:-
 
 
-......
+
+##### UPDATE student
+
+##### SET sname = 'Rahul Patel',
+
+##### &#x20;   sfees = 65000
+
+##### WHERE sid = 1;
 

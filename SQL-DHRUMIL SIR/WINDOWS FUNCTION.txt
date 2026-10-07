@@ -27,7 +27,7 @@ GROUP BY department
 
 PARITION IS USED AS GROUP BY.
 QUERY:-
-SELECT emp_name,department,AVG(salary) like AS you cannot use.
+SELECT emp_name,department,AVG(salary)              like/AS(ALIAS) you cannot use.
 over (PARTITION BY department) AS dept_avg
 FROM employee;
 
@@ -44,9 +44,9 @@ over(PARTITION BY emp_department ORDER BY emp_salary DESC) AS rank
 FROM employee;
 
 RANK() IS USED TO ASSIGN RANKING (POSITION)TO ROWS BASED ON SAME ORDER.
-RANK() → COMPETITION RANKING-->1,2,2,4(IF ANY HAVE SAME SALARY)
-DENSE_RANK() → NO GAPS-->1,2,2,3,4
-ROW_NUMBER() → UNIQUE NUMBERING--->1,2,3,4
+RANK() → COMPETITION RANKING-->IT WILL USE LIKE THIS --> 1,2,2,4(SKIP 3 AS 2,2 TWO-TIMES..)
+DENSE_RANK() → IN THIS NO GAPS-->1,2,2,3,4
+ROW_NUMBER() →IN THIS UNIQUE NUMBERING--->1,2,3,4 NO REPEATED RANKS EVEN AFTER SAME SALARY..
 NTILE(n) → DIVIDES ROWS INTO GROUPS (LIKE TOP 4 BUCKETS)
 
 LAG():-Gets previous row value

@@ -1,20 +1,20 @@
 ### ALTER
 
-#### -ALTER is used to modify an existing table.
+#### \-ALTER is used to modify an existing table.
 
 
 
 ##### You can:
 
-###### -Add column
+###### \-Add column
 
-###### -Delete column
+###### \-Delete column
 
-###### -Change column datatype
+###### \-Change column datatype
 
-###### -Rename column
+###### \-Rename column
 
-###### -Add constraints
+###### \-Add constraints
 
 
 
@@ -54,9 +54,9 @@
 
 ### QUERY:-(RENAME COLUMN)
 
-##### ALTER TABLE course
+##### ALTER TABLE table\_name
 
-##### CHANGE name(ALREADY) p\_course(NEW\_NAME) varchar(20)
+##### RENAME COLUMN old\_name TO new\_name;
 
 
 
@@ -72,13 +72,11 @@
 
 
 
-###### ALTER TABLE course
+###### ALTER TABLE child\_table
 
-###### ADD CONSTRAINT cstudent
+###### ADD CONSTRAINT fk\_name
 
-###### FOREIGN KEY (cid)
+###### FOREIGN KEY (table2\_column)
 
-###### REFRENCES student(sid).
-
-
+###### REFERENCES parent\_table\_name(table1\_column);
 

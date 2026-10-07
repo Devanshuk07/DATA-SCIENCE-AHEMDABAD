@@ -21,16 +21,22 @@ YOU CAN CREATE A TRRIGER FOR:-
 ---------------------------------------------------------
 SYNTAX:-AFTER INSERT
 ---------------------------------------------------------
+Create another table for messages
+CREATE TABLE student_log (
+    message VARCHAR(100)
+);
+
+
 DELIMITER $$
-CREATE TRIGGER trigger-name
-AFTER INSERT ON table1    //mess-entered-user
+CREATE TRIGGER STUDENT_AFTER_INSERT
+AFTER INSERT ON STUDENT    
 FOR EACH ROW
 
 BEGIN
-INSERT INTO table2(mess-column-name) VALUES(message-to-show)  //mess-shown
+INSERT INTO STUDENT_LOG(MESSAGE) VALUES('NEW STUDENT INSERTED')
 END $$
 
-DELIMITER ;
+DELIMITER ;          User enters data in table1 → trigger automatically runs → message is inserted into table2.
 ------------------------------------------------------
 SYNTAX:-BEFORE INSERT
 ------------------------------------------------------

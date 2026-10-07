@@ -2,7 +2,9 @@
 
 
 
-##### FORIEGN KEY:-
+##### FORIEGN KEY:-A foreign key is used to create a relationship between two tables and maintain referential integrity. It ensures that the value in one table must exist in the referenced table.
+
+
 
 ##### PRIMARY KEY:- UNIQUE + AUTO INCREMENT(YOU HAVE TO GIVE)(BOTH)
 
@@ -58,11 +60,9 @@ SO LINKING ALWAYS HAPPENS THROUGH ID.BOTH TABLE ID.
 
 ###### ALTER TABLE course
 
-###### ADD CONSTRAINT cstudent
+###### ADD FOREIGN KEY (sid)
 
-###### FOREIGN KEY (cid)
-
-###### REFRENCES student(sid).
+###### REFRENCES student(studentid).
 
 
 

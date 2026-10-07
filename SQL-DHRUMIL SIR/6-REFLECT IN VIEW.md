@@ -1,54 +1,72 @@
-## HOW TO CREATE A TABLE IN WHICH STUDENT COURSE IS LINKED WITH COURSE.WHILE CHANGING THE STUDENT COURSE IT REFLECTS IN VIEW.
+## a many-to-many relationship between student and course.
+
+##### \----------------------------------------------------------------------------------
 
 
 
-##### CREATING TABLE OF STUDENT:-
+###### You have 3 tables:
 
-##### CREATING TABLE OF COURSE:-
+###### Student
 
+###### &#x20;  ↓
 
+###### Enrollment
 
-#### THEN CREATING TABLE OF ENROLLMENT WITH FOREIGN KEY.
+###### &#x20;  ↓
 
-
-
-##### CREATE TABLE enrollment(
-
-##### eid int AUTO\_INCREMENT,
-
-##### sid int,
-
-##### FOREIGN KEY(sid) REFRENCES student(sid)
-
-##### cid int,
-
-##### FOREIGN KEY(cid) REFRENCES course(cid)
-
-##### PRIMARY KEY(eid)
-
-##### )
-
-
-
-###### But student and course are not directly related.
+###### Course
 
 ###### 
 
-###### They are related through enrollment.
+###### Enrollment is the middle/linking table.
+
+##### \----------------------------------------------------------------------------------
+
+###### For example:
+
+###### student
+
+###### sid | sname
+
+###### 1   | Rahul
 
 ###### 
 
-###### SIMPLE WAY TO REMEMBER:-
+###### course
+
+###### cid | cname
+
+###### 3   | Python
+
+###### 4   | SQL
 
 ###### 
 
-###### Student --(takes)--> Enrollment --(of)--> Course
+###### enrollment
 
+###### eid | sid | cid
 
+###### 1   | 1   | 3
 
-#### QUERY:-
+###### 2   | 1   | 4             Rahul (sid=1) has taken Python (cid=3) and SQL (cid=4).
 
+##### \----------------------------------------------------------------------------------
 
+###### Why do we need Enrollment?
+
+###### \-Because one student can take many courses, and one course can have many students.
+
+###### So:
+
+###### Student ←→ Enrollment ←→ Course
+
+###### Student and Course are not directly connected.
+
+##### \----------------------------------------------------------------------------------
+
+###### The VIEW
+
+###### \--------
 
 ###### CREATE VIEW enroll\_full AS
 
@@ -58,29 +76,31 @@
 
 ###### JOIN student
 
-###### ON student.sid = enrollment.sid  //because enrollment has sid also.
+###### ON student.sid = enrollment.sid
 
 ###### JOIN course
 
-###### ON enrollment.cid = course.cid
+###### ON enrollment.cid = course.cid;
 
 
 
+###### The view shows:
 
+###### sname | cname
 
-##### BY THIS QUERY:-The view stores the query, not the data.SO IT WILL REFLECT IN VIEW TABLE.
+###### Rahul | Python
 
-
-
-##### IF YOU WANT TO DELETE A STUDENT COURSE WHICH HAS ASSIGNED 3 COURSE TO 1 STUDENT.YOU HAVE TO DELETE FROM ENROLLMENT NOT FROM STUDENT OR COURSE TABLE.
-
-##### ALSO DELETE THE SPECIFIC COURSE FROM STUDENT:-
+###### Rahul | SQL
 
 
 
-### QUERY:-(DELETE SPECIFIC COURSE FROM STUDENT)
+###### If you change Rahul's name or the course name in the original tables, the normal view will reflect it when you query it.
 
-###### DELETE FROM enrollment
+##### \----------------------------------------------------------------------------------
 
-###### WHERE sid=1 AND cid=3
+###### One-line memory
+
+###### 
+
+###### Student and Course are connected through Enrollment, and the View combines them to display the relationship.
 
