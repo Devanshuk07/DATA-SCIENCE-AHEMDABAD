@@ -1,0 +1,168 @@
+## 1st TOPIC:-
+
+
+
+#### VIEW:-(VIRTUAL TABLE."When I have a main table and I want to work with only a specific part of that table, I can create a VIEW, which is a virtual table based on the main table.")
+
+WHICH CAN BE USED TO GET DATA FASTER.JUST LIKE CREATING INDEX.
+
+(LET MAIN TABLE/DATA = 35 CRORE)
+
+VIEW=STATE=GUJARAT=5 CRORE.
+
+VIEW=CITY=RAJKOT=5O LAKH.
+
+VIEW=PINCODE=360004=10,000.
+
+LIKE THIS CONDITIONS ACCORDING THEY MAKE MULTIPLE VIEW FROM 1 MAIN TABLE.TO FETCH DATA.
+
+
+
+IN VIEW WE ONLY USE SELECT QUERY. TO SELECT DATA.WE CAN USE OTHER LIKE DELETE,UPDATE,INSERT BUT IT WILL ALSO DO THIS IN MAIN TABLE SO WE DON'T WANT TO DO ANY CHANGE IN MAIN TABLE.
+
+
+
+#### QUERY:-(CREATE VIEW)(AS)(SELECT \* FROM)(WHERE)
+
+
+
+CREATE VIEW student\_view AS
+
+SELECT name, age
+
+FROM student;
+
+
+
+OR
+
+
+
+CREATE VIEW student\_view AS
+
+SELECT \* FROM student
+
+WHERE studentname='kd'.
+
+
+
+#### QUERY:-(DROP VIEW)
+
+DROP VIEW VIEW\_NAME.
+
+
+
+
+
+\--IMP
+
+IF YOU INSERT IN VIEW THEN IT WILL ALSO INSERT IN MAIN TABLE.
+
+ALSO IF YOU DELETE THE RECORD IN VIEW THEN IT WILL ALSO DELETE FROM MAIN TABLE.
+
+NEVER USE INSERT,UPDATE,DELETE IN VIEW...
+
+
+
+#### QUERY:-(UPDATE SET)(WHERE)
+
+UPDATE student\_view.name SET NAME="XYZ", address="xyz" WHERE cid=
+
+
+
+HERE YOU CAN UPDATE THE VIEW TABLE BUT IT WILL ALSO UPDATE THE MAIN TABLE SO NEVER USE UPDATE --IN VIEW.
+
+
+
+## 2ND TOPIC:-
+
+#### 
+
+#### INDEX:-(USED TO PERTICULAR COLOUMN PERFORMANCE INCREASE)
+
+
+
+###### 1)DEFAULT INDEX- BY SQL ITSELF.
+
+###### 
+
+###### 2)SIMPLE INDEX- ONE COLUMN INDEX (LIKE-NAME)
+
+###### 
+
+###### 3)COMPOSITE INDEX - MORE THAN ONE COLUMN (NAME AND COURSE)
+
+###### IMP:-(A composite index is created using two or more columns from the SAME table, not from different tables)
+
+###### 
+
+###### 4)UNIQUE INDEX - DONT ALLOW DUPLICATE VALUES IN A PERTICULAR UNIQUE COLUMN LIKE ADHAR CARD. YOU SHOULD HAVE UNIQUE NUMBER FOR EVERY ONE.
+
+##### 
+
+#### QUERY:----------------------------------
+
+###### SIMPLE INDEX:-CREATE INDEX INDEXNAME ON TABLENAME(COLUMNNAME)
+
+###### EX:-
+
+###### SIMPLE INDEX:-CREATE INDEX index\_name ON student(name)
+
+
+
+#### QUERY:----------------------------------
+
+###### COMPOSITE INDEX:- CREATE INDEX INDEXNAME ON TABLENAME(COLUMNNAME,COLUMNADDRESS)
+
+###### EX:-
+
+###### COMPOSITE INDEX:-CREATE INDEX student\_nam\_add ON student(name,address)
+
+
+
+#### QUERY:-----------------------------------
+
+###### UNIQUE INDEX:-CREATE UNIQUE INDEX student\_mobile ON student(mobile no.)
+
+#### 
+
+#### QUERY:-----------------------------------
+
+###### TO CHECK IS INDEX MADE OR NOT:-
+
+###### SHOW INDEX FROM student()
+
+
+
+.....
+
+
+
+##### TO DROP INDEX(IF CREATED BY MISTAKE).-------------
+
+#### QUERY:-
+
+#### DROP INDEX index\_name ON table\_name
+
+
+
+
+
+......
+
+
+
+
+
+##### HOW YOU USE EXPLAIN TO CHECK WEATHER INDEX IS USED OR NOT:-
+
+##### QUERY:-(WHEN WE HAVE USED COMPOSITE INDEX(emp\_dep\_sal) WE HAVE TO USE BOTH.
+
+##### EXPLAIN SELECT \* FROM table\_name WHERE department="IT" AND salary='22000'
+
+###### SO IF YOU USE ONLY SALARY COLUMN AND NOT DEPARMENT THEN THIS COMPOSITE INDEX WILL NOT BE USED BY SALARY...
+
+
+
+......
+

@@ -1,0 +1,42 @@
+What is Pandas?
+-Pandas is a Python library used for data manipulation, data analysis, cleaning, and handling structured data.
+
+Why do we use Pandas?
+-We use Pandas to load, clean, transform, analyze, filter, and manipulate datasets easily.
+
+What are the main data structures in Pandas?
+-Series      → 1-dimensional
+-DataFrame   → 2-dimensional
+
+How do you read a CSV file?
+-df = pd.read_csv("data.csv")
+
+What is shape?
+-It returns the number of rows and columns.
+
+What is loc?
+-loc is used to select rows and columns using labels.
+
+What is iloc?
+-iloc is used to select rows and columns using integer positions.
+
+Difference between loc and iloc?
+loc → label-based selection
+iloc → position-based selection
+
+How do you use multiple conditions?
+-df[(df["Age"] > 20) & (df["Salary"] > 30000)]
+& → AND
+| → OR
+
+What is aggregation?
+-Aggregation means applying calculations such as sum, mean, count, min, or max to grouped data.
+
+What is merge()?
+-merge() combines two DataFrames using one or more common columns.
+
+How do you convert a column to datetime?
+-df["Date"] = pd.to_datetime(df["Date"])
+
+Why is datetime important?
+-It allows us to perform date-based operations such as extracting year/month/day and working with time-series data.

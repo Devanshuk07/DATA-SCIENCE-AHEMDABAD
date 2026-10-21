@@ -1,0 +1,51 @@
+What is RAG?
+-RAG (Retrieval-Augmented Generation) is a technique where an AI retrieves relevant information from a database/documents and then uses it to generate an answer.
+
+What is LLM?
+-LLM (Large Language Model) is an AI model trained on a huge amount of text to understand and generate human-like language.Example: ChatGPT is an LLM.
+
+What is NLP?
+-NLP (Natural Language Processing) is a branch of AI that helps computers understand, process, and generate human language.
+
+What is agentic ai?
+-Agentic AI is AI that can plan, make decisions, and take actions automatically to achieve a goal, instead of only answering questions. example:- Samsung new ballie is an agentic ai.
+
+What is MCP?
+-MCP (Model Context Protocol) is a standard that allows an AI model to connect with external tools, apps, and data sources.
+
+what is DENDROGRAM?
+-Dendrogram is a tree-like diagram used in hierarchical clustering to show how data points are grouped together.
+
+What is JEV?
+-JEV is a fast AI decision model that classifies information, gives scores, or makes predefined decisions instead of generating normal text like an LLM.
+
+What is AGI?
+-AGI (Artificial General Intelligence) is an AI that can understand, learn, and perform many different tasks like a human, instead of being limited to one specific task.
+
+What is Traditional automation vs agent automation?
+-Traditional Automation: Follows fixed, predefined rules and steps.
+
+Agent Automation: Uses AI to understand the goal, make decisions, and choose actions dynamically.
+
+Example:  
+- Traditional: If email comes → send a fixed reply.
+- Agent: Read email → understand it → decide what action is needed → take the appropriate action.
+
+What is YOLO?
+-YOLO (You Only Look Once) is a real-time object detection algorithm.
+-“YOLO detects objects in an image or video and identifies their location and class in a single pass.”
+
+What are windows function in SQL?
+-Window functions in SQL perform calculations across related rows without combining them into one row.
+Examples: ROW_NUMBER(), RANK(), SUM(), AVG() with OVER().
+
+Can join works without creating foreign key?
+-Yes. JOIN can work without a foreign key.
+A JOIN only needs a matching column/value between the tables.
+
+What is data science?
+-Data Science is the process of collecting, cleaning, analyzing, and using data to find insights and make predictions using statistics, programming, and machine learning.
+
+What is Computer Vision?
+-Computer Vision is a branch of AI that helps computers understand and analyze images and videos.
+Example: Face recognition, object detection using YOLO, and self-driving cars.

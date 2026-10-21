@@ -1,0 +1,58 @@
+What is NumPy?
+-NumPy is a Python library used for numerical and mathematical operations. It provides a powerful array called ndarray.
+
+Why do we use NumPy?
+-We use NumPy for fast numerical calculations, array operations, mathematical operations, and handling large amounts of numerical data.
+
+What is a NumPy array?
+-A NumPy array is a collection of elements of the same data type, stored efficiently for numerical operations.
+
+What is np.linspace()?
+-It creates a specified number of equally spaced values between two numbers.
+
+What is indexing?
+-Indexing is used to access a particular element.
+
+What is slicing?
+-Slicing is used to access a range of elements.
+
+What is reshape()?
+-reshape() changes the shape of an array without changing its data.
+
+What is flatten()?
+-flatten() converts a multi-dimensional array into a 1D array.
+
+Difference between reshape() and flatten()?
+-reshape() changes the shape, while flatten() converts the array into one dimension.
+
+What is axis?
+-Axis tells NumPy which direction to perform an operation.
+-axis=0  Operation happens down the rows, giving result for each column.
+-axis=1  Operation happens across the columns, giving result for each row.
+
+What is broadcasting?
+-Broadcasting allows NumPy to perform operations between arrays of compatible different shapes.
+
+What is Boolean indexing?
+-It is used to filter array elements based on a condition.
+
+What is vectorization?
+-Vectorization means performing operations on the entire array without explicitly writing a Python loop.
+
+What is np.argmax()?
+-It returns the index of the maximum value.
+
+What is np.argmin()?
+-It returns the index of the minimum value.
+
+What is np.concatenate()?
+-It joins arrays together.
+
+What is np.vstack()?
+-It joins arrays vertically, like adding rows.
+
+What is np.hstack()?
+-It joins arrays horizontally, like adding columns.
+
+Why is NumPy important in Data Science?
+-NumPy provides fast numerical operations and forms the foundation for libraries like Pandas, SciPy and many machine-learning libraries.

@@ -1,0 +1,374 @@
+\-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+ CREATE TABLE student(
+
+   sid int AUTO\_INCREMENT,
+
+   sname varchar(50) NOT NULL, --(NULL IS COMPULSORY)
+
+   scourse varchar(20) NOT NULL,
+
+   saddress varchar(100) NOT NULL,
+
+    spincode int NOT NULL,
+
+    sage int NOT NULL,
+
+    sfees int NOT NULL,
+
+    semail varchar(30) NULL,
+
+    PRIMARY KEY(sid)     // write primary key always at last. best way.
+
+    )
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT:-
+
+INSERT INTO customer (cname,caddress,ceducation) VALUES ("jay","Rajkot","bca")
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+QUERY:-(SELECT \* FROM)(WHERE)
+
+
+
+SELECT * FROM customer WHERE name='jay',id=22
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+DELETE :-
+
+ DELETE FROM customer WHERE id=1
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+ UPDATE:-
+
+ UPDATE STUDENT
+
+ SET SFEES=60000
+ WHERE SID=1;
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+ TO UPDATE MULTIPLE COLUMNS:-
+
+
+
+UPDATE student
+
+SET sname = 'Rahul Patel',
+
+    sfees = 65000
+
+ WHERE sid = 1;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+ FOREIGN KEY :-
+ CREATE TABLE student(
+
+ studentid int AUTO_INCREMENT,
+
+ name varchar(30) NOT NULL,
+
+ PRIMARY KEY(studentid)
+
+)
+
+ CREATE TABLE course(
+
+ID int AUTO_INCREMENT,
+
+name VARCHAR(40) NOT NULL,
+
+sid int      --THIS IS NOT COURSE COLUMN BUT WILL SHOW COLUMN FOR STUDENTID(we want to create the part of student table in course so).
+
+
+FORIEGN KEY(sid)(name given in this table) REFERENCE student(studentid)(original primary key in student table)--(from student table id).
+
+PRIMERY KEY(id)
+
+)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+VIEW:-
+
+CREATE VIEW student_view AS
+
+SELECT name, age
+
+FROM student;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+SIMPLE INDEX:-CREATE INDEX index_name ON student(name)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMPOSITE INDEX:-CREATE INDEX student_nam_add ON student(name,address)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+UNIQUE INDEX:-CREATE UNIQUE INDEX student_mobile ON student(mobile no.)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+DROP INDEX index_name ON table_name
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+1)INNER JOIN:-
+
+SELECT student.sname, course.course
+
+FROM student
+
+INNER JOIN course
+
+ON student.sid = course.sid;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+LEFT JOIN:-
+
+SELECT pupil.name,pupil.age, course.name,course.fees
+
+FROM pupil
+
+LEFT JOIN course
+
+ON pupil.pupil_id(foreign_key)=course.course_id(primary_key in course) (//ALWAYS TAKE LINKED TABLE COLUMNS).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+FULL JOIN:-
+
+SELECT pupil.p_name, course.p_course
+
+FROM pupil
+
+LEFT JOIN course
+
+ON pupil_id=course_id
+
+
+UNION
+
+
+ SELECT pupil.p_name, course.p_course
+
+FROM pupil
+
+RIGHT JOIN course
+
+ ON pupil_id=course_id.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+RIGHT JOIN:-
+
+ SELECT pupil. name,pupil.age, course.name,course.fees
+
+FROM pupil
+
+ RIGHT JOIN course
+
+ ON pupil.pupil_id(foreign_key)=course.course_id(primary_key in course) (//ALWAYS TAKE LINKED TABLE COLUMNS).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+ CROSS JOIN = Everyone with Everyone. 😄
+
+ SELECT *
+
+ FROM student
+
+ CROSS JOIN course;
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+ QUERY:-(DESC ORDER)
+
+ SELECT * FROM products
+
+ ORDER BY price DESC
+
+
+
+ QUERY:-(ASC ORDER)
+
+ SELECT * FROM employee
+
+ ORDER BY hire_date ASC
+
+
+
+ QUERY:-(AVG SALARY OF EMP)
+
+ SELECT AVG(salary) FROM employee
+
+
+
+QUERY:-(COUNT TOTAL NUMBER OF PUPIL)
+
+ SELECT COUNT(*) AS total_pup   //\*-COUNTS THE ALL ROWS EVEN NULL VALUES
+
+ FROM pupil
+
+
+
+ QUERY:-(MAX PRICE)
+
+ SELECT MAX(price) FROM products
+
+
+
+ QUERY:-(MIN SALARY)
+
+ SELECT MIN(salary) FROM employee.
+
+\------------------------------------------------------------------------------------------------------------------------------------------------
+
+ SYNTAX:-(SINGLE-FETCH)
+
+ 
+
+ DELIMITER $$
+
+
+
+ CREATE PROCEDURE customer_fetch(
+
+
+
+	IN xid int
+
+
+ )
+
+ 
+
+ BEGIN
+
+ SELECT \* FROM customer WHERE cid=xid;
+
+ END $$
+
+  DELIMITER ;
+
+\------------------------------------------------------------------------------------------------------------------------------------------------
+
+ SYNTAX:-TRIGGER (AFTER INSERT)
+
+ 
+
+DELIMITER $$
+
+ CREATE TRIGGER trigger-name
+
+AFTER INSERT ON table1    //mess-entered-user
+
+FOR EACH ROW
+
+ 
+
+BEGIN
+
+ INSERT INTO table2(mess-column-name) VALUES(message-to-show)  //mess-shown
+
+ END $$
+
+
+
+ DELIMITER ;          User enters data in table1 → trigger automatically runs → message is inserted into table2.
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+ALTER :-
+
+
+
+QUERY:-(TO ADD COLUMN)
+
+ ALTER TABLE table_name
+
+ADD age int
+
+
+
+ QUERY:-(MODIFY COLUMN DATATYPE)
+
+ALTER TABLE table_name
+
+MODIFY column_name type_name
+
+
+
+ QUERY:-(ADD NOT NULL)
+
+ALTER TABLE table_name
+
+MODIFY column_name int NOT NULL.
+
+
+
+
+
+ QUERY:-(DROP COLUMN)
+
+ ALTER TABLE table_name
+
+ DROP COLUMN column_name.
+
+ 
+
+ QUERY:-(RENAME COLUMN)
+
+ ALTER TABLE table_name
+
+ RENAME COLUMN old_name TO new_name;
+
+
+
+ QUERY:-(ADD A COLUMN TO SPECIFIC POSITION)
+
+ALTER TABLE pupil
+
+ADD email VARCHAR(100) AFTER name;
+
+\------------------------------------------------------------------------------------------------------------------------------------------------
+
+ OVER()
+
+
+
+ SELECT emp_name,department,AVG(salary)              like/AS(ALIAS) you cannot use.
+
+ over (PARTITION BY department) AS dept_avg
+
+ FROM employee;
+
+
+
+ SELECT emp_name,salary,RANK()
+
+over (ORDER BY salary DESC) AS ranking
+
+ FROM employee
+

@@ -1,0 +1,301 @@
+PYTHON
+1. What is PVM?
+
+PVM stands for Python Virtual Machine. It executes Python bytecode.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+2. What is an interpreted language?
+
+An interpreted language executes code at runtime using an interpreter.
+You write Python source code (.py files).
+Python compiles it to bytecode (.pyc files), which is an intermediate, platform-independent representation.
+The Python Virtual Machine (PVM) interprets and executes that bytecode.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+3. What is a higher-order function?
+
+A higher-order function is a function that takes another function as an argument or returns a function.
+EX:- map(),,filter(),,reduce()
+
+numbers = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, numbers))
+print(result)                    # Here, map() takes a function (lambda) as an argument, so map() is a higher-order function.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+4. What is a lambda function?
+
+"A lambda function is an anonymous, single-expression function used for short and simple operations."
+------------------------------------------------------------------------------------------------------------------------------------------------------
+5. What is a decorator?
+
+A decorator is a function that modifies or extends the behavior of another function without changing its code.
+If data is encoded like: SGVsbG8=
+A decoder can convert it back to: Hello
+
+| Encoder                           | Decoder                |
+| --------------------------------- | ---------------------- |
+| Original → Encoded                | Encoded → Original     |
+| Converts data into another format | Converts it back       |
+| Example: text → Base64            | Example: Base64 → text |
+Interpreter → executes code translating it into machine-understandable instructions."
+Decoder → converts encoded data back to its original form
+Encoder → converts data into an encoded form
+------------------------------------------------------------------------------------------------------------------------------------------------------
+6. What is an iterator?
+
+An iterator is an object that allows us to access elements one by one from a collection.
+List → [10, 20, 30]
+          ↓
+       Iterator
+          ↓
+     10 → 20 → 30
+An iterator remembers where it is and gives you the next value when you call next().
+------------------------------------------------------------------------------------------------------------------------------------------------------
+7. What is a generator?
+
+A generator(yeild) is a function that produces values one at a time using yield, instead of returning everything at once.
+Suppose you need numbers from 1 to 1 crore.
+numbers = [1, 2, 3, ..., 10000000]
+A generator produces them one by one:
+def numbers():
+    for i in range(1, 10000001):
+        yield i                                # So it is memory efficient.
+
+return vs yield
+return → gives the result and ends the function
+yield  → gives one value and pauses the function
+------------------------------------------------------------------------------------------------------------------------------------------------------
+8. What is *args and **kwargs?
+
+*args allows a function to accept multiple positional arguments.
+**kwargs allows a function to accept multiple keyword arguments.
+
+args:- def add(*args):
+        print(args)
+    
+        add(10, 20, 30, 40)       # *args stores the values as a tuple.
+
+kwargs :- def student(**kwargs):
+            print(kwargs)
+
+            student(name="KD", age=22, course="Python")            # **kwargs stores the values as a dictionary.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+What is self?
+
+self refers to the current object of the class.
+ex:- class Student:
+    def __init__(self, name):
+        self.name = name
+------------------------------------------------------------------------------------------------------------------------------------------------------
+11. What is __init__()?
+
+Yes, in Python, __init__() is commonly called a constructor, but technically it is an initializer
+__init__() is a special method that is automatically called when an object is created
+------------------------------------------------------------------------------------------------------------------------------------------------------
+12. What is __str__()?
+
+__str__() defines the readable string representation of an object.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+13. What is abstraction?
+
+Abstraction means hiding implementation details and showing only necessary information.
+An abstract class is a class that cannot be instantiated (you cannot create its object).
+It serves as a blueprint for other classes and contains one or more abstract methods that must be implemented by its subclasses.
+
+ex:-
+from abc import ABC,abstractmethod
+class animal(ABC):
+    def __init__(self,name,voice):       # if you want to add here @abstractmethod then every class(dog,cat) should have __init__.
+        self.name=name
+        self.voice=voice
+    @abstractmethod
+    def sound(self):             # sound is abstract method here.
+        pass
+
+class dog(animal):              # every subclass(dog,cat,dinosaur) must implement sound.means you cannot write pass in any subclasses.
+    def sound(self):
+        print(f'{self.name} has sound {self.voice}')
+
+class cat(animal):
+    def sound(self):
+        print(f'{self.name} has sound {self.voice}')
+
+class dinosaur(animal):
+    def sound(self):
+        print(f'{self.name} has sound {self.voice}')
+
+d=dog('tommy','bark')
+c=cat('kitty','meow')
+d1=dinosaur('Trex','sqearks')
+
+d.sound()
+c.sound()
+d1.sound()
+
+'''In this example, we are hiding the implementation of the sound() method.
+
+The abstract class Animal only specifies that every animal must have a sound() method, but it does not define how the sound is produced.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+14. What is encapsulation?
+
+Encapsulation means bundling data and methods together inside a class and controlling access to the data.
+| Access Modifier | Syntax       | Accessibility                                                  |
+| --------------- | ------------ | -------------------------------------------------------------- |
+| Public          | `variable`   | Accessible from anywhere                                       |
+| Protected       | `_variable`  | Accessible within the class and its subclasses (by convention) |
+| Private         | `__variable` | Accessible only within the class (name mangling applied)       |
+------------------------------------------------------------------------------------------------------------------------------------------------------
+15. What is polymorphism?
+
+Polymorphism means one method or interface can have different behaviors.
+
+Different classes can define methods with the same name but different behaviors.
+class Dog:                      # different classes--> dog,cat,cow.
+    def sound(self):            # same name--> sound.
+        print("Dog-->barks")
+
+class Cat:
+    def sound(self):
+        print("Cat-->meows")
+
+class Cow:
+    def sound(self):
+        print("Cow-->moos")
+
+animals = [Dog(), Cat(), Cow()]  # as this is function so we have to write it as dog().
+
+for animal in animals:
+    animal.sound()
+------------------------------------------------------------------------------------------------------------------------------------------------------
+16. What is method overriding?
+
+Method overriding happens when a child class provides its own version of a method that is already defined in the parent class.
+class Animal:
+    def sound(self):
+        print("Animal makes sound")
+
+
+class Dog(Animal):
+    def sound(self):
+        print("Dog barks")         Child class (Dog) provides its own version of a method that already exists in the parent class (Animal).
+                                   Dog overrides the sound() method of Animal.
+
+d = Dog()
+d.sound()
+------------------------------------------------------------------------------------------------------------------------------------------------------
+17. What is method overloading?
+
+Method overloading means having multiple methods with the same name but different parameters. Python does not support traditional method overloading directly.
+class Test:
+    def add(self, a, b):
+        print(a + b)
+
+    def add(self, a, b, c):
+        print(a + b + c)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+18. What is super()?
+
+super() is used to access the parent class's methods or constructor.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+23. What is exception handling?
+
+Exception handling is used to handle runtime errors using try, except, else, and finally.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+24. What is list comprehension?
+
+List comprehension is a short way to create a list using a single expression.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+25. What is ORM?
+
+ORM stands for Object-Relational Mapping. It allows us to interact with a database using objects and classes instead of writing SQL for every operation.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+26. Why set dont allow reapetation ?
+
+A set doesn't allow repetition (duplicates) because a set is designed to store unique values only.
+Internally, a Python set uses a hash table. When you add a value, Python checks its hash/equality to determine whether an equivalent value is already present.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+27. What is fast api and how it is used ?
+
+FastAPI is a Python web framework used to build APIs quickly and efficiently.Suppose you have a Machine Learning model that predicts iPhone prices.
+Your Python model works locally, but you want another application or website to send data to it.
+Website / App
+     ↓
+  FastAPI
+     ↓
+ML Model
+     ↓
+Prediction
+     ↓
+FastAPI → Website / App
+
+FastAPI is a modern Python web framework used to build APIs. It is commonly used to connect applications with backend services, databases, and machine learning models.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+28. WHAT IS AGGREGRATE FUNCTION ? ?
+
+An aggregate function is a SQL function that takes multiple rows as input and returns a single result.
+ex:-
+| Function  | Meaning             |
+| --------- | ------------------- |
+| `COUNT()` | Counts rows         |
+| `SUM()`   | Adds values         |
+| `AVG()`   | Calculates average  |
+| `MAX()`   | Finds highest value |
+| `MIN()`   | Finds lowest value  |
+------------------------------------------------------------------------------------------------------------------------------------------------------
+what is sql intergration:-
+
+-Connecting SQL/database with another application, tool, or programming language so they can work together.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+“What is IF and Stack Memory?”
+1. IF
+Used for decision making.
+age = 20
+if age >= 18:
+    print("Adult")
+
+
+2. Stack Memory
+def first():
+    second()   --> it will go here first
+def second():
+    print("Hello")  --> then here
+first()        ---> The computer keeps track of these function calls using a call stack.
+
+1. first() is called
+       ↓
+2. first() starts running
+       ↓
+3. first() calls second()
+       ↓
+4. second() starts running
+       ↓
+5. print("Hello") runs
+       ↓
+6. second() finishes
+       ↓
+7. first() finishes
+so just for a sec python need some memory to keep information about first(). --> that is stack memory..
+The reason Python needs to keep information about first() is so it knows where to come back to and what first() was doing after second() finishes.
+
+In one line:
+IF → decision making.
+Stack memory → manages function execution.
+-------------------------------------------------------------------------------
+Why set dont allow reapetation?
+-A set doesn't allow repetition (duplicates) because a set is designed to store unique values only.
+-Internally, a Python set uses a hash table. When you add a value, Python checks its hash/equality to determine whether an equivalent value is already present.
+
+What is fast api? How is it used?
+-FastAPI is a Python web framework used to build APIs quickly and efficiently.
+-Suppose you have a Machine Learning model that predicts iPhone prices.
+-Your Python model works locally, but you want another application or website to send data to it.
+
+What is REST API?
+-REST API is a way for two applications to communicate with each other over the internet using HTTP.REST stands for Representational State Transfer.The REST API sends request to your backend/model and returns the prediction.
+
+Common HTTP methods
+- GET → Get/read data
+- POST → Send/create data
+- PUT → Update data
+- DELETE → Delete data
+
+Difference between fast and rest api?
+REST API = rules/design for communication
+FastAPI = Python tool used to build that API
