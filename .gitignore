@@ -1,8 +1,14 @@
+
 MACHINE LEARNING - DHRUMIL SIR/SUPERVISED LEARNING/ASSIGNMENTS/creditcard.csv
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Ignore environment secrets
 =======
+>>>>>>> origin/main
+=======
+
+# Ignore environment secrets
 >>>>>>> origin/main
 .env
 **/.env
