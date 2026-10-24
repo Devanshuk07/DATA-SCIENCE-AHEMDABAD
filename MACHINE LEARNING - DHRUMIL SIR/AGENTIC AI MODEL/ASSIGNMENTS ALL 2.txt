@@ -1,0 +1,254 @@
+FOLDER = AGENTIC AI
+SESSION 1 :-1.
+Write a short explanation (2-3 sentences) of what makes an AI agent different from a traditional machine learning model, using an example from any app you use daily (like Instagram or Zomato) to illustrate your answer.
+2.
+List three characteristics of agent-based AI systems and, for each, give a real or imagined example of how it could improve a feature in an app like Flipkart, Swiggy, or BookMyShow.
+3.
+Research and summarize in your own words how AutoGPT or ReAct Agents work, and describe one possible use case for such an agent in a music or video streaming app (like Spotify or YouTube).<br><br><em><strong>Hint:</strong> Focus on how the agent can make decisions or take actions without direct user input.</em>
+4.
+Pick any one: ChatGPT Agents, Gemini Agents, or Microsoft Copilot. Create a simple flowchart (hand-drawn or digital) showing how this agent interacts with a user and takes actions based on user input, highlighting the agent's autonomy and proactivity.
+
+SESSION 2:-1.
+Write a Python function called perceive_input() that takes a user's text message (like 'Show me trending songs on Spotify') and returns a structured dictionary with intent and keywords extracted from the input.<br><br><em><strong>Hint:</strong> Use basic string methods or regular expressions to identify intent words (like 'show', 'play', 'book') and key app names.</em>
+2.
+Implement a simple reasoning function called decide_next_action(perceived_data) that takes the output of perceive_input() and returns the next step as a string, such as 'fetch_spotify_trending' or 'search_movie_bookmyshow'.
+3.
+Simulate the 'act' phase by creating an execute_action(action) function that prints a mock response for each action, e.g., 'Fetching trending songs from Spotify...' or 'Searching movies on BookMyShow...'. Connect this with your previous functions to complete a basic perceive → think → act loop.
+4.
+Map the perceive → think → act loop you built to an LLM-based agent: briefly describe (in 3-5 lines) how each of your functions would be replaced or enhanced if you used a tool like OpenAI's GPT-3.5 to process input, plan actions, and generate responses.
+
+SESSION 3:-1.
+Simulate the 'Perceive → Think → Act → Learn' loop by writing a simple Python script that takes a user's food preference as input (Perceive), decides on a restaurant type (Think), prints a suggested restaurant (Act), and then asks for feedback to improve the next suggestion (Learn).
+2.
+Implement a Short-Term Memory for a chatbot that remembers the last 3 user messages and can repeat them back when asked.<br><br><em><strong>Hint:</strong> Use a list and append each new message, removing the oldest if there are more than 3.</em>
+3.
+Create a Long-Term Memory simulation for a playlist recommender: store every song a user has played in a text file, and write code to load and display the full play history each time the script runs.
+4.
+Design a Contextual Memory feature for a movie recommendation agent: when a user asks for 'comedy movies like the one I watched last week', your code should retrieve the genre and title of their last watched movie and suggest similar ones.
+5.
+List 3 real use-cases where memory (short-term, long-term, or contextual) would improve the user experience in an LLM-powered app like WhatsApp, Zomato, or Spotify, and briefly describe how each type of memory would be used.
+
+SESSION 4:-Tasks
+1.
+Write a Python function that takes a user's search query (like a movie name) and calls the OMDb API (http://www.omdbapi.com/) to fetch and display the movie's title, year, and IMDb rating. Show the result in the console.<br><br><em><strong>Hint:</strong> Use the requests library to make the API call and handle the JSON response.</em>
+2.
+Simulate a Zomato-style menu search: Create a script that reads a local CSV file named 'menu.csv' containing columns 'dish', 'cuisine', and 'price'. Ask the user to enter a cuisine type (e.g., 'Italian') and display all matching dishes with their prices.
+3.
+Build a simple agent workflow that takes user input for a song name, checks if the song exists in a local SQLite database called 'music.db' (table: songs), and prints 'Song found' or 'Song not found'.<br><br><em><strong>Hint:</strong> Use Python's sqlite3 module to interact with the database.</em>
+4.
+Implement prompt chaining: Write a script where the agent first asks the user for a movie genre, then uses that genre to call the OMDb API and fetch 3 movies, and finally asks the user to pick one for detailed info. Display the full details of the selected movie.
+5.
+Decompose the task of 'Booking a movie ticket' into at least 4 agent steps (e.g., get user input, check showtimes, reserve seat, confirm booking) and write a short Python comment or pseudocode block for each step showing how the agent would handle it.
+
+SESSION 5:-1.
+Draw a workflow diagram showing how a LangChain agent processes a user request to find the cheapest flight from Ahmedabad to Mumbai, including each step from input to tool invocation and response.
+2.
+Implement a simple state machine in Python that models a multi-step IPL ticket booking process: states should include 'Start', 'Select Match', 'Choose Seats', 'Payment', and 'Confirmation'. Print the current state after each transition.<br><br><em><strong>Hint:</strong> Use a dictionary to map transitions and a loop to simulate user actions.</em>
+3.
+Write a Python function that simulates an agent performing a multi-hop reasoning task: given a movie name, first fetch its release year from a dictionary, then use that year to look up the top trending song of that year from another dictionary, and print both results.
+4.
+Modify the following agent loop code so it safely stops execution after 5 steps to prevent infinite loops:<br><br><code>while not done:<br>  action = agent.next_step()<br>  done = action['done']</code><br><br><em><strong>Constraint:</strong> Add a step counter and break the loop if it exceeds 5 iterations.</em>
+5.
+Use ChatGPT to generate Python code for an agent that handles multiple steps in ordering food on Swiggy (e.g., select restaurant, choose dishes, confirm order). Paste the generated code and describe one safety check you would add to prevent incorrect tool calls.
+
+SESSION 6:-1.
+Create a tool schema for a 'Song Search' tool that could be used by an AI agent in a Spotify-style music app — include the tool's name, a short description, and at least two input parameters (such as song name and artist).
+2.
+Design a tool schema for a 'BookMyShow Movie Ticket Finder' agent tool — specify the tool name, a description, and three input parameters (such as city, movie name, and date).<br><br><em><strong>Hint:</strong> Think about what information a user would provide to search for available movie tickets.</em>
+3.
+Write a JSON object that represents the function calling format for a 'GetWeather' tool, following the OpenAI function calling schema — include the function name, description, and an object for parameters with location and date as required fields.
+4.
+Given the following tool schema for a 'Food Delivery Tracker' agent, identify and fix any issues in the input parameters section so it matches the Gemini function calling format: <br><br>{ "name": "trackOrder", "description": "Tracks the status of a food delivery order", "parameters": [ { "order_id": "string" }, { "user_phone": "number" } ] }<br><br><em><strong>Hint:</strong> Check how parameters should be structured in the Gemini schema.</em>
+
+SESSION 7:-1.
+Use the Gemini API to fetch a summary of the latest IPL cricket match and print the summary in your Python script.<br><br><em><strong>Hint:</strong> Use the requests library to call the Gemini API endpoint and handle the JSON response.</em>
+2.
+Integrate the Hugging Face Transformers library in Python to perform sentiment analysis on 5 recent Zomato food reviews (you can use any sample review texts). Display whether each review is positive, negative, or neutral.
+3.
+Write a simple Python agent loop that takes a list of WhatsApp-style messages, checks if any message contains the word 'urgent', and prints 'Alert: Urgent message received!' if found, otherwise prints 'No urgent messages.'
+4.
+Modify your agent logic to use a local inference model (such as a small spaCy NER model) to detect if any message in a given list mentions a restaurant name (like 'Barbeque Nation' or 'Domino's'). Print all detected restaurant names.
+5.
+Use ChatGPT or Gemini to generate Python pseudo-code for an agent event loop that: 1) reads new Flipkart product reviews, 2) decides if a review is about delivery issues, 3) calls a function to log delivery complaints, and 4) outputs a summary report.<br><br><em><strong>Constraint:</strong> Paste both the AI-generated pseudo-code and your own comments explaining each step.</em>
+
+SESSION 8:-1.
+Create a Python function get_weather(city_name) that takes a city name as input and prints a mock temperature value (e.g., 28°C) for that city.
+2.
+Use the requests library to fetch current weather data for a given city from the OpenWeatherMap API (https://api.openweathermap.org/data/2.5/weather) and print the temperature in Celsius.<br><br><em><strong>Hint:</strong> Sign up for a free API key and use the 'main.temp' field from the JSON response.</em>
+3.
+Write a function weather_advisory(temp_celsius) that takes the temperature in Celsius and returns an advisory message: 'Carry an umbrella' if below 20°C, 'Stay hydrated' if above 30°C, or 'Weather is pleasant' otherwise.
+4.
+Combine your get_weather and weather_advisory functions to build a simple command-line Weather Assistant: input a city name, fetch and display the temperature, and show the advisory message.
+5.
+Refactor your Weather Assistant code to handle invalid city names gracefully by displaying 'City not found, please try again' if the API returns an error.<br><br><em><strong>Hint:</strong> Check the 'cod' field in the API response for error handling.</em>
+
+SESSION 9:-1.
+Write a Python function that simulates an LLM agent's 'internal thought' and 'external action' process for a food delivery chatbot. The function should print its reasoning (internal thought) before deciding whether to suggest a restaurant, show the menu, or confirm an order (external action) based on a user's input.
+2.
+Given a scenario where a user asks, 'Can you recommend a good movie?', describe in comments how an LLM agent would use internal thought to reason about the request and then take an external action to reply with a recommendation.<br><br><em><strong>Hint:</strong> Separate your answer into two parts: what the agent thinks internally, and what it outputs externally.</em>
+3.
+Implement a simple ReAct Pattern (Reason + Action) in code for a virtual cricket assistant. The agent should reason about a user's question like 'Who won the last IPL match?' and then take an action to fetch or display the answer.<br><br><em><strong>Hint:</strong> Use print statements to show the 'Reason' step before the 'Action' step.</em>
+4.
+Use ChatGPT or another LLM-based AI tool to generate a step-by-step reasoning (internal thought) and action plan for answering the question: 'How do I transfer money using PhonePe?'. Paste the AI's output and highlight how it separates reasoning from action.
+
+SESSION 10:-1.
+Install LangChain in your Python environment and write a script agent_intro.py that prints the available Agent classes in LangChain using the langchain.agents module.
+2.
+Create a simple LangChain agent in a file called spotify_agent.py that takes a user's text input like 'Find trending songs' and responds with a fixed message such as 'Fetching trending songs from Spotify.'
+3.
+Add a memory component to your LangChain agent in spotify_agent.py so that the agent remembers the last 2 user queries and can repeat them back if the user types 'What did I ask before?'.<br><br><em><strong>Hint:</strong> Use ConversationBufferMemory from langchain.memory.</em>
+4.
+Use LlamaIndex to connect your agent to a small PDF file (for example, a downloaded IPL match summary). Write a script pdf_agent.py where the agent can answer simple questions like 'Who won the match?' by reading the PDF.<br><br><em><strong>Hint:</strong> Use LlamaIndex's SimpleDirectoryReader to load the PDF and query it.</em>
+5.
+Use ChatGPT or Copilot to generate Python code for a LangChain agent that can use a calculator tool. Test the generated code by asking the agent 'What is 15 times 8?' and share the output along with the code.
+
+SESSION 11:-1.
+Simulate a multi-agent system for a food delivery scenario: create three Python functions—fetch_menu(), analyze_orders(), and generate_delivery_report()—where each function represents an agent handling one part of the process. Call them in sequence and print the final delivery report.
+2.
+Implement cooperative agent behavior by having two agents (functions) in Python: one fetches trending songs from a mock Spotify playlist (as a list), and the second analyzes the list to count how many songs are from the 'Pop' genre. Display the result.
+3.
+Build a simple task delegation system: create a Python script where Agent 1 fetches recent IPL match scores (use a predefined dictionary), Agent 2 calculates the highest team score, and Agent 3 prints a formatted summary report for the user.
+4.
+Refactor your multi-agent code so that each agent (function) receives its input only from the previous agent’s output, not from global variables.<br><br><em><strong>Hint:</strong> Pass data explicitly between functions to mimic agent-to-agent communication.</em>
+5.
+Use ChatGPT or any LLM to help you design a new multi-agent workflow for a Zomato-style restaurant review aggregator: describe the roles of at least three agents and outline the data flow between them. Submit both your prompt and the AI’s response.
+
+SESSION 12:-1.
+Create a Python function called call_weather_api() that takes a city name as input, calls a mock weather API (you can just return a fake temperature), and returns the result as a dictionary. Simulate how an LLM agent could use this function as a tool.
+2.
+Design a simple planning framework for a Zomato-style food ordering agent: outline the steps (as functions or pseudocode) the agent would take to recommend a restaurant, place an order, and confirm delivery. Clearly label each step in your plan.
+3.
+Write a Python function decide_playlist_action(song_likes, song_skips) that decides whether an autonomous Spotify-like agent should recommend, remove, or promote a song in the playlist based on the number of likes and skips.<br><br><em><strong>Hint:</strong> Use if-else logic to make the decision and return the action as a string.</em>
+4.
+Use ChatGPT or another LLM to generate Python code for an agent that reads a PDF file containing IPL match stats and answers questions like 'Who scored the most runs?'. Paste the code you received and describe one change you would make to improve its accuracy.
+5.
+Extend an existing agent with RAG (Retrieval-Augmented Generation) by adding a function that extracts key information from a BookMyShow-style PDF ticket (movie name, seat number, showtime) and returns it as a dictionary.<br><br><em><strong>Hint:</strong> You may use PyPDF2 or a similar library to parse the PDF.</em>
+
+SESSION 13:-1.
+Create a simple multi-modal agent script that takes both a text prompt and an image file as input, then prints the text and the image filename to confirm both were received.
+2.
+Use the Zapier platform to automate a workflow: whenever a new email arrives in your Gmail inbox with the subject 'Assignment', automatically save the email's attachment to your Google Drive.<br><br><em><strong>Hint:</strong> Set up Gmail as the trigger app and Google Drive as the action app in Zapier.</em>
+3.
+Write a Python function fetch_song_info(song_name) that uses the Spotify Web API to retrieve and print the artist and album name for a given song.<br><br><em><strong>Hint:</strong> Use the requests library and Spotify's search endpoint. You can use a demo or test token.</em>
+4.
+Given the following agent output log, calculate the agent's Task Completion Rate: Out of 20 assigned tasks, the agent successfully completed 15 and partially completed 2. Show your calculation and final percentage.
+5.
+Pick any multi-modal agent demo you built and evaluate it using these three metrics: Accuracy, Task Completion Rate, and Reasoning Trace Analysis. Write a short paragraph for each metric explaining your findings.
+
+SESSION 14:-1.
+Install Python's 'mcp' package (or the official MCP reference implementation), then start a basic MCP Server locally that responds with a static message when any request is received.
+2.
+Create a simple MCP Client script that sends a JSON-RPC request to your MCP Server using HTTP transport and prints the response in the console.<br><br><em><strong>Hint:</strong> Use the requests library in Python to send the JSON payload.</em>
+3.
+Modify your MCP Server to recognize a 'get_song_recommendation' method: when called, it should return a JSON object with a random trending song title (imagine a Spotify-style feature).
+4.
+Compare stdio transport and HTTP transport in MCP by writing a short note on when you would use each, and update your MCP Client to use stdio transport instead of HTTP for sending a request.
+5.
+Explore the official MCP documentation or use ChatGPT to draft a custom MCP Prompt for a 'get_movie_showtimes' method (BookMyShow-style). Share the prompt and explain how you would integrate it into your MCP Server.
+
+SESSION 15:-1.
+Install LangChain and create a simple Python script that uses LangChain to summarize a Flipkart product review. Display the original review and the summary in the console.
+2.
+Use LangChain to build a conversational agent that answers questions about IPL cricket teams using a provided list of team names and captains. The agent should respond accurately to queries like 'Who is the captain of Mumbai Indians?'.
+3.
+Integrate LangGraph to design a flow where a user can ask for Zomato restaurant recommendations, and the agent first asks for the user's city, then suggests 3 restaurants from a hardcoded list based on the city.
+4.
+Set up a basic MCP (Multi-Component Pipeline) workflow that chains together LangChain and LangGraph: first, summarize a BookMyShow movie review using LangChain, then use LangGraph to ask the user if they want more details about the movie, and display a follow-up message based on their response.<br><br><em><strong>Hint:</strong> Use LangChain for the summarization step and LangGraph to manage the user interaction flow.</em>
+5.
+Use ChatGPT or Copilot to generate a LangChain code snippet that fetches and summarizes trending topics from a mock Twitter API, then test and modify the code to print the top 2 trends in your console.<br><br><em><strong>Hint:</strong> Paste the AI's code and document any changes you made to get it working.</em>
+
+SESSION 16:-1.
+Set up a basic MCP (Multi-Channel Processing) server using Python and Flask that listens on port 5000 and responds with 'MCP Server Running' when accessed at the root endpoint.
+2.
+Create a new endpoint /order-status on your MCP server that accepts a POST request with a JSON payload containing an orderId and returns a simulated order status like 'Delivered', 'In Transit', or 'Cancelled'.
+3.
+Add error handling to your MCP server so that if a required field (like orderId) is missing in the /order-status request, it returns a JSON error message with status code 400.<br><br><em><strong>Hint:</strong> Use Flask's request.get_json() and check for missing keys before processing.</em>
+4.
+Simulate a Flipkart-style notification system by adding an endpoint /notify that accepts a JSON payload with a userId and message, then logs the notification to a file named notifications.log.
+5.
+Use ChatGPT or Copilot to generate code for adding a new endpoint /user-profile that returns a mock user profile (name, email, phone) when given a userId, then test and integrate the generated code into your MCP server.
+
+SESSION 17:-1.
+Set up a simple MCP (Multi-Channel Processing) server using Python and SQLite that listens for incoming requests on a specified port and can handle basic commands to add or retrieve user data.
+2.
+Design a function store_order(order_id, user_id, amount) that inserts a new order into an 'orders' table in your MCP server's SQLite database, then returns a success message.<br><br><em><strong>Hint:</strong> Use parameterized SQL queries to prevent SQL injection.</em>
+3.
+Implement a handler in your MCP server to process a 'GET_USER_ORDERS' command, which takes a user_id and returns all order_ids and amounts for that user from the database.
+4.
+Simulate a Zomato-style order history: extend your MCP server so it can handle a 'GET_LAST_N_ORDERS' command, returning the N most recent orders for a user, sorted by order time.<br><br><em><strong>Constraint:</strong> Add a timestamp column to your orders table and use it for sorting.</em>
+5.
+Use ChatGPT or Copilot to generate a Python function that deletes an order by order_id from your MCP server database, then test and refine the generated code if needed.
+
+SESSION 18:-1.
+Set up a simple MCP (Multi-Client Protocol) server script that listens on a specified port and prints a message whenever a client connects.
+2.
+Modify your MCP server to handle file listing requests: when a client sends the command 'LIST', respond with the names of all files in a given directory (for example, a 'music' folder containing MP3 files, like a mini Spotify backend).
+3.
+Extend your MCP server to support file download: when a client sends 'GET filename', send the contents of that file back to the client. Test this by downloading a sample image or text file from your server.
+4.
+Add error handling to your MCP server so that if a client requests a file that does not exist, the server responds with a clear error message instead of crashing.<br><br><em><strong>Hint:</strong> Use try-except (or try-catch) blocks to catch file-not-found errors and send a custom error response to the client.</em>
+5.
+Use ChatGPT or Copilot to generate code snippets for adding a 'DELETE filename' command to your MCP server, allowing clients to delete files from the server directory. Integrate and test this feature, and note any improvements you made to the AI-generated code.
+
+SESSION 18(PART1):-1.
+Create a Python class called FoodOrderAgent that represents an agent which can place and track orders for a food delivery app like Swiggy. Include methods to place_order(), check_status(), and cancel_order().
+2.
+Simulate a multi-step decision process for a MovieRecommendationAgent that suggests a movie to a user based on genre and rating preferences, similar to how Netflix recommends content. Use if-else logic to represent the agent's reasoning steps and print the final recommendation.
+3.
+Implement an agent communication scenario where two agents, PlaylistAgent and SongAgent, interact: PlaylistAgent requests a song of a specific mood (e.g., 'happy'), and SongAgent responds with a song name. Use simple Python classes and method calls to simulate this exchange.<br><br><em><strong>Hint:</strong> Focus on message passing between objects to mimic agent communication.</em>
+4.
+Refactor the following code to make the agent's decision logic more modular: an agent currently has a single decide_action() method with all logic inside. Extract the logic for checking user preferences and for checking item availability into separate helper methods, then call them from decide_action().
+5.
+Use ChatGPT or Copilot to generate Python code for an agent that manages a shopping cart (like Flipkart), with methods to add_item(), remove_item(), and get_total(). Paste the generated code, then test each method with sample data and note any corrections you had to make.
+
+SESSION 19:-1.
+Install the GitHub MCP Server on your local machine by following the official documentation and verify the installation by running the server and accessing its default endpoint.
+2.
+Create a new GitHub repository named 'playlist-manager', clone it to your system, and push a README.md file describing a simple Spotify-style playlist feature you would like to build.
+3.
+Configure the GitHub MCP Server to automatically trigger a message in your terminal whenever a new issue is created in your 'playlist-manager' repository.<br><br><em><strong>Hint:</strong> Use the webhook integration feature of the MCP Server and test by creating a dummy issue on GitHub.</em>
+4.
+Modify the MCP Server configuration to only respond to pull request events labeled 'bug' in your repository, and print the PR title and author to the console.
+5.
+Use ChatGPT or GitHub Copilot to generate a sample webhook handler function for the MCP Server that posts a thank you comment on any new issue in your repository, then implement and test it.
+
+
+SESSION 19(PART2):-1.
+Design an agent that recommends trending music playlists to users based on their recent listening history, similar to Spotify's Discover Weekly. Define the agent's perception, reasoning, and action modules in a Python script.
+2.
+Implement a multi-agent system where one agent fetches new movie releases (simulate with a static list), and another agent suggests which movies to watch based on the user's preferred genres. Demonstrate the communication between agents using function calls.
+3.
+Refactor an existing single-agent code that suggests restaurants based on cuisine (using a simple Python function) to a modular agent class structure with clear separation of perception, reasoning, and action methods.<br><br><em><strong>Hint:</strong> Create an AgentRestaurantRecommender class and split the logic into three methods for each module.</em>
+4.
+Use ChatGPT or another AI tool to generate ideas for how agentic AI could automate tasks in a food delivery app like Zomato or Swiggy. Pick one idea and outline the agent's workflow in 5-7 steps.
+
+SESSION 20:-1.
+Create two simple agent classes in Python, SearchAgent and RecommendationAgent, where SearchAgent takes a query and returns a list of matching products (from a hardcoded list), and RecommendationAgent takes a user ID and returns three recommended products. Simulate a Flipkart-style shopping assistant where both agents work independently.
+2.
+Build a MultiAgentManager class that coordinates communication between a ChatAgent (handles user queries) and a PlaylistAgent (creates playlists) to simulate a Spotify-like assistant. When the user asks for a playlist, the ChatAgent should pass the request to PlaylistAgent and return the playlist result.
+3.
+Modify your MultiAgentManager to allow agents to share information: for example, if the ChatAgent receives a request for a 'top trending playlist', it should first ask the PlaylistAgent for trending data, then respond to the user. Log all agent-to-agent messages in a list for debugging.<br><br><em><strong>Hint:</strong> Use method calls or message passing between agent objects to simulate communication.</em>
+4.
+Use ChatGPT or another LLM-based AI tool to generate Python code for a simple multi-agent system where one agent fetches cricket scores (simulate IPL scores) and another agent summarizes the scores. Test the generated code and note any changes you had to make to get it working.
+
+SESSION 24:-1.
+Use the Open-Meteo Weather API to fetch and display the current temperature for your city in a Python script.<br><br><em><strong>Hint:</strong> Refer to the Open-Meteo API docs for the correct endpoint and parameters.</em>
+2.
+Write a Python function that reads a CSV file named 'my_expenses.csv' (with columns: date, amount, category) and prints the total amount spent in the 'Food' category.
+3.
+Integrate the GNews API in a Python script to fetch and display the top 3 latest technology news headlines.
+4.
+Build a calculator tool in Python that takes a mathematical expression as input (like '23+7*2') and outputs the result, handling basic operations (+, -, *, /).<br><br><em><strong>Constraint:</strong> Do not use Python's eval() function for this task.</em>
+5.
+Use Gemini API or OpenAI API (choose one) to generate a short motivational quote and display it in your Python script.<br><br><em><strong>Hint:</strong> If you don't have API access, use ChatGPT to generate sample code for this task and adapt it for your script.</em>
+
+SESSION 25:-1.
+In a new Streamlit app file called assistant_ui.py, design a simple chat-like interface where users can type a request (for example, 'Show me my upcoming movie bookings') and see the agent's response displayed below.
+2.
+Write a Python function called detect_intent(user_input) that takes a user's message as input and returns the detected intent as a string (e.g., 'show_bookings', 'play_music', 'get_weather').<br><br><em><strong>Hint:</strong> Use basic keyword matching for at least three different intents.</em>
+3.
+Create a function called select_tool(intent) that decides which tool or API to use based on the detected intent (for example, if intent is 'play_music', return 'SpotifyAPI').
+4.
+Implement a memory feature in your agent: save each user request and the agent's response to a list called conversation_history, and display the last three exchanges in the Streamlit UI.
+5.
+Map agent actions to UI feedback: when the agent is 'gathering information' or 'executing a task', show a loading spinner or status message in Streamlit so the user knows something is happening.<br><br><em><strong>Hint:</strong> Use st.spinner or st.info components in Streamlit for this.</em>
