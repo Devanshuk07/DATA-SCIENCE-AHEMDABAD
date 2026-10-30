@@ -1,0 +1,179 @@
+FOLDER = PROMPT ENGINEERING AND RAG
+
+SESSION 1 :- 1. A food-delivery customer-support chatbot gives
+inconsistent answers: sometimes it refuses valid refund requests and
+sometimes approves them without checking order status. The cause is
+vague prompts that do not specify the expected output format or decision
+rules. Explain what distinguishes a clear prompt from an unclear prompt
+in this context. Describe at least two specific prompt changes that
+would improve consistency and reliability, and justify each change.
+
+2.  A food-delivery complaint classifier must label messages as ‘Late
+    Delivery’, ‘Wrong Item’, ‘Missing Item’, or ‘Poor Quality’. You have
+    200 labelled examples, but the LLM has a limited context window and
+    cannot accept all examples at once. Compare zero-shot and few-shot
+    prompting, recommend an approach for this situation, and explain
+    what determines how many examples to include in a few-shot prompt.
+
+3.  A delivery-operations assistant must calculate the best stop
+    sequence for a delivery agent using five order addresses, estimated
+    traffic delays, and priority levels. Direct questions to the LLM
+    produce incorrect answers without reasoning. Explain how
+    Chain-of-Thought (CoT) prompting could improve the output. Give a
+    brief example of a restructured step-by-step prompt and identify one
+    limitation of this technique.
+
+4.  An internal tool lets delivery partners query a 150-page policy
+    handbook covering payout rules, SLA terms, and dispute resolution.
+    The handbook is updated every quarter. Justify using RAG rather than
+    fine-tuning for this use case. Address at least two reasons,
+    including how each approach handles document updates, and identify a
+    scenario in which fine-tuning would be the better choice.
+
+5.  A RAG pipeline searches 500 restaurant menus stored as PDFs, each
+    averaging 8 pages. Retrieved chunks sometimes cut off mid-sentence
+    or separate a dish name from its price. Explain the role of chunk
+    size and chunk overlap. Describe how you would adjust both
+    parameters to improve retrieval quality and identify one trade-off
+    introduced by your adjustments.
+
+6.  A RAG complaint-resolution system stores complaint-summary
+    embeddings in a FAISS index. Query speed is excellent, but results
+    sometimes include outdated records for resolved complaints that
+    should have been removed. A team member suggests switching to
+    ChromaDB. Compare FAISS and ChromaDB, give one scenario where each
+    is a better fit, explain whether switching would solve the
+    outdated-record problem, and identify an additional step required
+    regardless of the vector store used.
+
+SESSION 2 :- 1. Task 1: Structured Prompt Builder for Food Delivery
+Chatbot
+
+Build a Python script that constructs and validates a role-based,
+structured prompt for a food-delivery customer-support chatbot and
+prints the formatted prompt to the console.
+
+Requirements: - Define a system prompt assigning the LLM the role of a
+food-delivery support agent, setting a professional and helpful tone,
+and specifying that responses must not exceed 80 words. - Define a
+formatted user-message template accepting customer_name, order_id, and
+issue_type. Populate it with at least two different test cases and print
+the complete system and user prompt pair for each. - Add a validation
+function that raises ValueError with a clear message if issue_type is
+not one of: ‘late delivery’, ‘missing item’, or ‘wrong item’. - Wrap
+prompt construction in try-except, catch ValueError, and print a
+user-friendly error message without crashing.
+
+2.  Task 2: Few-Shot Complaint Classifier Prompt Builder
+
+Build a Python function that constructs a few-shot prompt for
+classifying food-delivery complaints into predefined categories and
+returns the formatted prompt string ready for an LLM API.
+
+Requirements: - Define a list of at least four labelled Input / Output
+examples covering ‘Late Delivery’, ‘Wrong Item’, ‘Missing Item’, and
+‘Poor Quality’. - Write build_few_shot_prompt(complaint_text) to insert
+the labelled examples before the new complaint and a blank Output line
+for the LLM to complete. - Write add_example(text, label) to append a
+new labelled pair to the examples list. Call it once with a new example,
+then call build_few_shot_prompt again and confirm the new example
+appears in the printed output. - Test the prompt builder with at least
+two different complaint strings and print each resulting prompt, showing
+consistent structure.
+
+3.  Task 3: Semantic Search Over Restaurant FAQs
+
+Build a Python script that encodes restaurant FAQ entries into
+embeddings using sentence-transformers and retrieves the most
+semantically relevant FAQ for a user query using a FAISS index.
+
+Requirements: - Define at least six FAQ strings covering topics such as
+delivery time, order cancellation, refund eligibility, item
+substitution, and contacting support. Generate embeddings using
+SentenceTransformer(‘all-MiniLM-L6-v2’). - Build a FAISS IndexFlatL2
+index from FAQ embeddings converted to a float32 NumPy array, and
+confirm that the index size matches the number of FAQs. - Write
+search_faq(query, k=2) to encode the query, search the index, and return
+the top-k FAQ strings with their L2 distances. - Test with at least two
+queries using different words from the stored FAQs (for example, ‘How do
+I get money back?’ versus an FAQ phrased as ‘Refund policy’) and print
+the results to demonstrate semantic matching beyond exact keyword
+overlap.
+
+4.  Task 4: RAG-Powered Food Delivery Policy Q&A Pipeline
+
+Build a Python script implementing a minimal RAG pipeline: chunk a
+policy document, embed the chunks, retrieve relevant context, and
+assemble a structured final prompt.
+
+Requirements: - Define a multi-paragraph food-delivery policy text of at
+least 300 words covering refund rules, delivery windows, and order
+cancellation. Split it into overlapping chunks of approximately 100
+words with a 20-word overlap and print the total chunk count. - Generate
+sentence-transformer embeddings for all chunks, store them in a FAISS
+IndexFlatL2 index, and implement retrieve(query, k=3) returning the
+top-k relevant chunk strings. - Write build_rag_prompt(query,
+retrieved_chunks) to construct a prompt in this order: system role
+instruction, numbered retrieved context blocks, user question, and
+explicit instruction to answer only from the provided context and say ‘I
+don’t know’ if the answer is absent. - Demonstrate the end-to-end
+pipeline with a hardcoded question such as ‘What is the refund policy
+for missing items?’ Print retrieved chunks, assembled prompt, and a
+placeholder simulated answer string.
+
+SESSION 3 :- 1. Mini Project: Food Delivery Help Desk Chatbot
+(RAG-Powered Console App)
+
+Build a console-based help-desk chatbot for a food-delivery platform
+combining document chunking, FAISS-based retrieval, structured prompt
+engineering, and few-shot complaint classification in one interactive
+program with session logging.
+
+Requirements: - Provide a menu with at least three options: (1) Ask a
+policy question via RAG, (2) Classify a complaint using few-shot
+prompting, and (3) Exit. Continue showing the menu until Exit is
+selected. - For option 1, load and chunk a predefined food-delivery
+policy text of at least 500 words covering refunds, cancellations, and
+delivery rules at startup. Embed all chunks using sentence-transformers
+and build a FAISS index. For each query, retrieve the top three relevant
+chunks, assemble a structured RAG prompt, and print retrieved context
+and the complete prompt. - For option 2, maintain a few-shot example
+bank with at least four labelled complaints. Accept a user complaint,
+build and print the few-shot classification prompt, and display the
+predicted category along with the closest matching example from the
+bank. - Validate user input: reject empty questions and blank complaint
+text, display a user-friendly error, and re-prompt without crashing. -
+Maintain a plain-text session log recording each interaction’s
+timestamp, mode (RAG / Classify), query text, and output. On exit, print
+the total policy questions asked and complaints classified during the
+session.
+
+SESSION 4 :- 1. AI-AUGMENTED LEARNING
+
+STEP 1 — BUILD WITH AI
+
+Write a Python program that reads a plain-text food-delivery
+refund-policy file from disk, splits it into fixed-size chunks,
+generates sentence-transformer embeddings, and stores them in a FAISS
+index.
+
+Requirements: - Accept a user question typed at the command line,
+retrieve the top two most relevant chunks, and construct a structured
+RAG prompt using those chunks as context. - Print the retrieved chunks,
+assembled prompt, and a simulated placeholder answer. A hardcoded answer
+is acceptable; no live API call is required. - Run in a loop so the user
+can ask multiple questions without restarting the script, and exit
+cleanly when the user types ‘quit’.
+
+STEP 2 — TEST & DEBUG (WITHOUT AI)
+
+Test the code independently, identify at least one bug, limitation, or
+improvement in the AI-generated solution, and fix it yourself. Consider
+chunks splitting mid-sentence, FAISS returning fewer results than k when
+the index has fewer chunks, missing instructions to answer only from
+supplied context, or failure to strip whitespace before checking for
+‘quit’.
+
+SUBMISSION REQUIREMENTS: - The exact prompt(s) given to the AI tool. -
+The AI’s original code and corrected version. - A 3–4 line note
+explaining what you changed and why the AI’s version needed it.
